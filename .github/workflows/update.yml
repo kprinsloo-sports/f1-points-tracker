@@ -1,0 +1,63 @@
+name: Update F1 tracker
+
+on:
+  schedule:
+    # Every day at 06:47 UTC. Runs with no new results change nothing and commit nothing.
+    - cron: "47 6 * * *"
+  workflow_dispatch:
+    inputs:
+      season:
+        description: "Season to rebuild (leave empty for the current year)"
+        required: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: tracker
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild season from F1DB
+        env:
+          F1DB_CACHE: ${{ runner.temp }}/f1db
+        run: python update.py ${{ inputs.season }}
+
+      - name: Commit new data
+        run: |
+          git add data
+          if git diff --cached --quiet; then
+            echo "No new results."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Update F1 points data"
+            git push
+          fi
+
+      - name: Build site
+        run: |
+          mkdir -p _site
+          cp -r index.html assets _site/
+          cp -r data _site/
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4

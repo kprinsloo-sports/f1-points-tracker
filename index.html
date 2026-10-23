@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F1 Points Tracker</title>
+<script src="assets/chart.umd.js"></script>
+<style>
+  :root {
+    --bg: #f6f6f8; --card: #ffffff; --text: #16161a; --muted: #6b6b76; --line: #e3e3e8;
+    --accent: #e10600; --grid: rgba(0,0,0,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #111114; --card: #1b1b20; --text: #ececf1; --muted: #9a9aa6; --line: #2c2c34; --grid: rgba(255,255,255,.07); }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 16px 48px; }
+  header { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+  h1 { margin: 0; font-size: 24px; letter-spacing: -.01em; }
+  h1 span { color: var(--accent); }
+  .sub { color: var(--muted); font-size: 13px; margin-top: 2px; }
+  select, .tabs button { font: inherit; color: var(--text); background: var(--card); border: 1px solid var(--line);
+                         border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 20px; }
+  .kpi { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .kpi .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
+  .kpi .value { font-size: 22px; font-weight: 650; margin-top: 4px; }
+  .kpi .note { color: var(--muted); font-size: 13px; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 12px; }
+  .tabs button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin-bottom: 20px; }
+  .card h2 { margin: 0 0 12px; font-size: 16px; }
+  .chart { position: relative; height: 420px; }
+  @media (max-width: 600px) { .chart { height: 320px; } }
+  .tablewrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  th, td { padding: 8px 10px; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th { color: var(--muted); font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+  th:nth-child(2), td:nth-child(2), th:nth-child(3), td:nth-child(3) { text-align: left; }
+  td .sw { display: inline-block; width: 4px; height: 16px; border-radius: 2px; vertical-align: middle; margin-right: 8px; }
+  td.pts { font-weight: 650; }
+  .up { color: #1a9a50; } .down { color: var(--accent); }
+  footer { color: var(--muted); font-size: 12px; }
+  footer a { color: inherit; }
+  .error { padding: 40px; text-align: center; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1><span>F1</span> Points Tracker</h1>
+      <div class="sub" id="sub">Loading…</div>
+    </div>
+    <label>Season <select id="season"></select></label>
+  </header>
+
+  <section class="kpis" id="kpis"></section>
+
+  <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-view="drivers">Drivers</button>
+    <button role="tab" aria-selected="false" data-view="constructors">Constructors</button>
+  </div>
+
+  <div class="card">
+    <h2 id="chartTitle">Cumulative points after each Grand Prix</h2>
+    <div class="chart"><canvas id="chart"></canvas></div>
+  </div>
+
+  <div class="card">
+    <h2 id="tableTitle">Standings</h2>
+    <div class="tablewrap"><table id="table"></table></div>
+  </div>
+
+  <footer id="footer"></footer>
+</div>
+
+<script>
+const state = { season: null, view: "drivers", drivers: [], constructors: [], rounds: [], chart: null };
+const $ = id => document.getElementById(id);
+const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+const getJSON = path => fetch(path, { cache: "no-cache" }).then(r => { if (!r.ok) throw new Error(path); return r.json(); });
+
+async function init() {
+  let seasons;
+  try { seasons = await getJSON("data/seasons.json"); } catch { seasons = [new Date().getFullYear()]; }
+  $("season").innerHTML = seasons.map(s => `<option>${s}</option>`).join("");
+  $("season").onchange = e => load(+e.target.value);
+  document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => {
+    document.querySelectorAll(".tabs button").forEach(x => x.setAttribute("aria-selected", x === b));
+    state.view = b.dataset.view; render();
+  });
+  load(seasons[0]);
+}
+
+async function load(season) {
+  state.season = season;
+  const base = `data/${season}/`;
+  try {
+    [state.drivers, state.constructors, state.rounds] = await Promise.all(
+      ["dash_drivers", "dash_constructors", "dash_rounds"].map(n => getJSON(base + n + ".json")));
+  } catch {
+    $("sub").textContent = `No data for ${season} yet.`;
+    $("kpis").innerHTML = ""; $("table").innerHTML = "";
+    if (state.chart) state.chart.destroy();
+    return;
+  }
+  try {
+    const log = await getJSON(base + "changelog.json");
+    const last = log[log.length - 1];
+    $("footer").innerHTML = `Data: <a href="https://github.com/f1db/f1db">F1DB</a> · last changed ${new Date(last.at).toLocaleString()}`;
+  } catch { $("footer").innerHTML = `Data: <a href="https://github.com/f1db/f1db">F1DB</a>`; }
+  render();
+}
+
+function latest(rows) {
+  const r = Math.max(0, ...rows.map(x => x.round));
+  return rows.filter(x => x.round === r).sort((a, b) => (a.standing ?? 99) - (b.standing ?? 99));
+}
+
+function render() {
+  const done = state.rounds.filter(r => r.completed);
+  const next = state.rounds.find(r => !r.completed);
+  const lastRound = done[done.length - 1];
+  $("sub").textContent = lastRound
+    ? `${state.season} season · after Round ${lastRound.round}, ${lastRound.name} · ${done.length} of ${state.rounds.length} rounds`
+    : `${state.season} season · no races yet`;
+
+  const d = latest(state.drivers), c = latest(state.constructors);
+  const tile = (label, value, note) => `<div class="kpi"><div class="label">${label}</div><div class="value">${value}</div><div class="note">${note}</div></div>`;
+  $("kpis").innerHTML = [
+    d[0] ? tile("Drivers' leader", d[0].driver, `${d[0].cumulative} pts · ${d[0].team}`) : "",
+    d[1] ? tile("Gap to P2", `${d[1].gapToLeader} pts`, `${d[1].driver}`) : "",
+    c[0] ? tile("Constructors' leader", c[0].team, `${c[0].cumulative} pts · ${c[1] ? c[1].gapToLeader + " ahead of " + c[1].team : ""}`) : "",
+    next ? tile("Next race", next.gpName, `Round ${next.round} · ${new Date(next.date + "T12:00:00Z").toLocaleDateString(undefined, { day: "numeric", month: "short" })}${next.sprintWeekend ? " · sprint" : ""}`)
+         : tile("Season", "Complete", `${state.rounds.length} rounds`),
+  ].join("");
+
+  drawTable(done);
+  if (window.Chart) drawChart(done);
+}
+
+function drawChart(done) {
+  const isD = state.view === "drivers";
+  const rows = isD ? state.drivers : state.constructors;
+  const key = isD ? "driverId" : "teamId";
+  const order = latest(rows).map(r => r[key]);
+  const seenTeam = {};
+  const datasets = order.map(id => {
+    const mine = rows.filter(r => r[key] === id);
+    const info = mine[mine.length - 1];
+    const second = isD && (seenTeam[info.teamId] = (seenTeam[info.teamId] || 0) + 1) > 1;
+    return {
+      label: isD ? info.abbr : info.team,
+      data: done.map(rd => mine.find(r => r.round === rd.round)?.cumulative ?? null),
+      borderColor: info.color, backgroundColor: info.color,
+      borderDash: second ? [6, 4] : [], borderWidth: 2, pointRadius: 2, pointHoverRadius: 5, tension: .15,
+      hidden: isD && order.indexOf(id) >= 10,
+    };
+  });
+  if (state.chart) state.chart.destroy();
+  const muted = css("--muted"), grid = css("--grid");
+  state.chart = new Chart($("chart"), {
+    type: "line",
+    data: { labels: done.map(r => r.gp), datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false, interaction: { mode: "nearest", intersect: false },
+      scales: {
+        x: { ticks: { color: muted }, grid: { color: grid } },
+        y: { beginAtZero: true, ticks: { color: muted }, grid: { color: grid }, title: { display: true, text: "Points", color: muted } },
+      },
+      plugins: {
+        legend: { position: "bottom", labels: { color: muted, boxWidth: 14, usePointStyle: false } },
+        tooltip: { itemSort: (a, b) => b.parsed.y - a.parsed.y,
+                   callbacks: { title: items => done[items[0].dataIndex].gpName } },
+      },
+    },
+  });
+  $("chartTitle").textContent = isD
+    ? "Drivers: cumulative points after each Grand Prix (top 10 shown, click the legend to add more)"
+    : "Constructors: cumulative points after each Grand Prix";
+}
+
+function drawTable(done) {
+  const isD = state.view === "drivers";
+  const rows = isD ? state.drivers : state.constructors;
+  const now = latest(rows);
+  const prevRound = done.length > 1 ? done[done.length - 2].round : null;
+  const prevPos = {};
+  rows.filter(r => r.round === prevRound).forEach(r => prevPos[r[isD ? "driverId" : "teamId"]] = r.standing);
+  const move = r => {
+    const p = prevPos[r[isD ? "driverId" : "teamId"]];
+    if (!p || !r.standing || p === r.standing) return "";
+    return p > r.standing ? `<span class="up">▲${p - r.standing}</span>` : `<span class="down">▼${r.standing - p}</span>`;
+  };
+  const head = isD
+    ? "<tr><th>Pos</th><th>Driver</th><th>Team</th><th>Points</th><th>Gap</th><th>Last GP</th><th>Wins</th><th>Podiums</th><th></th></tr>"
+    : "<tr><th>Pos</th><th>Team</th><th></th><th>Points</th><th>Gap</th><th>Last GP</th><th></th></tr>";
+  const body = now.map(r => isD
+    ? `<tr><td>${r.standing ?? ""}</td><td><span class="sw" style="background:${r.color}"></span>${r.driver}</td><td>${r.team}</td>
+       <td class="pts">${r.cumulative}</td><td>${r.gapToLeader || "–"}</td><td>${r.raced ? "+" + r.points : "DNS"}</td>
+       <td>${r.wins}</td><td>${r.podiums}</td><td>${move(r)}</td></tr>`
+    : `<tr><td>${r.standing ?? ""}</td><td><span class="sw" style="background:${r.color}"></span>${r.team}</td><td></td>
+       <td class="pts">${r.cumulative}</td><td>${r.gapToLeader || "–"}</td><td>+${r.points}</td><td>${move(r)}</td></tr>`).join("");
+  $("table").innerHTML = `<thead>${head}</thead><tbody>${body}</tbody>`;
+  $("tableTitle").textContent = isD ? "Drivers' standings" : "Constructors' standings";
+}
+
+init();
+</script>
+</body>
+</html>
