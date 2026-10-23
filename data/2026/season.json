@@ -492,7 +492,14 @@
    "sprintPos": null,
    "cumulative": 25,
    "standing": 1,
-   "started": true
+   "started": true,
+   "qualiPos": 1,
+   "grid": 1,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 17.794,
+   "pitTotal": 17.794
   },
   {
    "round": 1,
@@ -505,7 +512,14 @@
    "sprintPos": null,
    "cumulative": 18,
    "standing": 2,
-   "started": true
+   "started": true,
+   "qualiPos": 2,
+   "grid": 2,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 20.985,
+   "pitTotal": 20.985
   },
   {
    "round": 1,
@@ -518,7 +532,14 @@
    "sprintPos": null,
    "cumulative": 15,
    "standing": 3,
-   "started": true
+   "started": true,
+   "qualiPos": 4,
+   "grid": 4,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 17.664,
+   "pitTotal": 17.664
   },
   {
    "round": 1,
@@ -531,7 +552,14 @@
    "sprintPos": null,
    "cumulative": 12,
    "standing": 4,
-   "started": true
+   "started": true,
+   "qualiPos": 7,
+   "grid": 7,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 17.741,
+   "pitTotal": 17.741
   },
   {
    "round": 1,
@@ -544,7 +572,14 @@
    "sprintPos": null,
    "cumulative": 10,
    "standing": 5,
-   "started": true
+   "started": true,
+   "qualiPos": 6,
+   "grid": 6,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 17.649,
+   "pitTotal": 35.915
   },
   {
    "round": 1,
@@ -557,7 +592,14 @@
    "sprintPos": null,
    "cumulative": 8,
    "standing": 6,
-   "started": true
+   "started": true,
+   "qualiPos": null,
+   "grid": 20,
+   "retired": null,
+   "fastestLap": true,
+   "pitStops": 2,
+   "pitBest": 18.078,
+   "pitTotal": 37.148
   },
   {
    "round": 1,
@@ -570,7 +612,14 @@
    "sprintPos": null,
    "cumulative": 6,
    "standing": 7,
-   "started": true
+   "started": true,
+   "qualiPos": 12,
+   "grid": 12,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 18.774,
+   "pitTotal": 18.774
   },
   {
    "round": 1,
@@ -583,7 +632,14 @@
    "sprintPos": null,
    "cumulative": 4,
    "standing": 8,
-   "started": true
+   "started": true,
+   "qualiPos": 9,
+   "grid": 9,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 18.506,
+   "pitTotal": 18.506
   },
   {
    "round": 1,
@@ -596,7 +652,14 @@
    "sprintPos": null,
    "cumulative": 2,
    "standing": 9,
-   "started": true
+   "started": true,
+   "qualiPos": 10,
+   "grid": 10,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 18.916,
+   "pitTotal": 41.535
   },
   {
    "round": 1,
@@ -609,7 +672,14 @@
    "sprintPos": null,
    "cumulative": 1,
    "standing": 10,
-   "started": true
+   "started": true,
+   "qualiPos": 14,
+   "grid": 14,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 18.672,
+   "pitTotal": 18.672
   },
   {
    "round": 1,
@@ -622,7 +692,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 11,
-   "started": true
+   "started": true,
+   "qualiPos": 13,
+   "grid": 13,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 18.57,
+   "pitTotal": 18.57
   },
   {
    "round": 1,
@@ -635,7 +712,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 12,
-   "started": true
+   "started": true,
+   "qualiPos": 15,
+   "grid": 15,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 18.118,
+   "pitTotal": 36.522
   },
   {
    "round": 1,
@@ -648,7 +732,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 13,
-   "started": true
+   "started": true,
+   "qualiPos": 8,
+   "grid": 8,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 18.19,
+   "pitTotal": 37.302
   },
   {
    "round": 1,
@@ -661,7 +752,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 14,
-   "started": true
+   "started": true,
+   "qualiPos": 16,
+   "grid": 16,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 18.561,
+   "pitTotal": 46.294
   },
   {
    "round": 1,
@@ -674,7 +772,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 15,
-   "started": true
+   "started": true,
+   "qualiPos": null,
+   "grid": 21,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 19.859,
+   "pitTotal": 80.413
   },
   {
    "round": 1,
@@ -687,7 +792,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 16,
-   "started": true
+   "started": true,
+   "qualiPos": 18,
+   "grid": 18,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 18.951,
+   "pitTotal": 40.322
   },
   {
    "round": 1,
@@ -700,7 +812,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": null,
-   "started": true
+   "started": true,
+   "qualiPos": null,
+   "grid": 22,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 22.469,
+   "pitTotal": 92.337
   },
   {
    "round": 1,
@@ -713,7 +832,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 20,
-   "started": true
+   "started": true,
+   "qualiPos": 17,
+   "grid": 17,
+   "retired": "Mechanical",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 25.895,
+   "pitTotal": 25.895
   },
   {
    "round": 1,
@@ -726,7 +852,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 21,
-   "started": true
+   "started": true,
+   "qualiPos": 19,
+   "grid": 19,
+   "retired": "Fuel system",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 30.387,
+   "pitTotal": 30.387
   },
   {
    "round": 1,
@@ -739,7 +872,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 17,
-   "started": true
+   "started": true,
+   "qualiPos": 3,
+   "grid": 3,
+   "retired": "Engine",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 1,
@@ -752,7 +892,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 18,
-   "started": true
+   "started": true,
+   "qualiPos": 5,
+   "grid": 5,
+   "retired": "Accident",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 1,
@@ -765,7 +912,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 19,
-   "started": true
+   "started": true,
+   "qualiPos": 11,
+   "grid": 11,
+   "retired": "Hydraulics",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 2,
@@ -778,7 +932,14 @@
    "sprintPos": 5,
    "cumulative": 47,
    "standing": 2,
-   "started": true
+   "started": true,
+   "qualiPos": 1,
+   "grid": 1,
+   "retired": null,
+   "fastestLap": true,
+   "pitStops": 1,
+   "pitBest": 23.005,
+   "pitTotal": 23.005
   },
   {
    "round": 2,
@@ -791,7 +952,14 @@
    "sprintPos": 1,
    "cumulative": 51,
    "standing": 1,
-   "started": true
+   "started": true,
+   "qualiPos": 2,
+   "grid": 2,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.39,
+   "pitTotal": 23.39
   },
   {
    "round": 2,
@@ -804,7 +972,14 @@
    "sprintPos": 3,
    "cumulative": 33,
    "standing": 4,
-   "started": true
+   "started": true,
+   "qualiPos": 3,
+   "grid": 3,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 22.433,
+   "pitTotal": 22.433
   },
   {
    "round": 2,
@@ -817,7 +992,14 @@
    "sprintPos": 2,
    "cumulative": 34,
    "standing": 3,
-   "started": true
+   "started": true,
+   "qualiPos": 4,
+   "grid": 4,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 25.633,
+   "pitTotal": 25.633
   },
   {
    "round": 2,
@@ -830,7 +1012,14 @@
    "sprintPos": 8,
    "cumulative": 17,
    "standing": 5,
-   "started": true
+   "started": true,
+   "qualiPos": 10,
+   "grid": 10,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 22.967,
+   "pitTotal": 22.967
   },
   {
    "round": 2,
@@ -843,7 +1032,14 @@
    "sprintPos": 11,
    "cumulative": 9,
    "standing": 7,
-   "started": true
+   "started": true,
+   "qualiPos": 7,
+   "grid": 7,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.539,
+   "pitTotal": 23.539
   },
   {
    "round": 2,
@@ -856,7 +1052,14 @@
    "sprintPos": 7,
    "cumulative": 8,
    "standing": 9,
-   "started": true
+   "started": true,
+   "qualiPos": 14,
+   "grid": 14,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 22.721,
+   "pitTotal": 22.721
   },
   {
    "round": 2,
@@ -869,7 +1072,14 @@
    "sprintPos": 15,
    "cumulative": 4,
    "standing": 11,
-   "started": true
+   "started": true,
+   "qualiPos": 9,
+   "grid": 9,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 23.062,
+   "pitTotal": 48.81
   },
   {
    "round": 2,
@@ -882,7 +1092,14 @@
    "sprintPos": 12,
    "cumulative": 2,
    "standing": 13,
-   "started": true
+   "started": true,
+   "qualiPos": 17,
+   "grid": 17,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.106,
+   "pitTotal": 23.106
   },
   {
    "round": 2,
@@ -895,7 +1112,14 @@
    "sprintPos": 14,
    "cumulative": 1,
    "standing": 15,
-   "started": true
+   "started": true,
+   "qualiPos": 12,
+   "grid": 12,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.195,
+   "pitTotal": 23.195
   },
   {
    "round": 2,
@@ -908,7 +1132,14 @@
    "sprintPos": "DNF",
    "cumulative": 0,
    "standing": 17,
-   "started": true
+   "started": true,
+   "qualiPos": 11,
+   "grid": 11,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 37.358,
+   "pitTotal": 37.358
   },
   {
    "round": 2,
@@ -921,7 +1152,14 @@
    "sprintPos": "DNF",
    "cumulative": 4,
    "standing": 10,
-   "started": true
+   "started": true,
+   "qualiPos": 15,
+   "grid": 15,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.29,
+   "pitTotal": 23.29
   },
   {
    "round": 2,
@@ -934,7 +1172,14 @@
    "sprintPos": "DNF",
    "cumulative": 0,
    "standing": 19,
-   "started": true
+   "started": true,
+   "qualiPos": 20,
+   "grid": 19,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 27.795,
+   "pitTotal": 27.795
   },
   {
    "round": 2,
@@ -947,7 +1192,14 @@
    "sprintPos": 10,
    "cumulative": 0,
    "standing": 16,
-   "started": true
+   "started": true,
+   "qualiPos": 13,
+   "grid": 13,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 25.997,
+   "pitTotal": 73.064
   },
   {
    "round": 2,
@@ -960,7 +1212,14 @@
    "sprintPos": 19,
    "cumulative": 0,
    "standing": 20,
-   "started": true
+   "started": true,
+   "qualiPos": 22,
+   "grid": 21,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 26.213,
+   "pitTotal": 26.213
   },
   {
    "round": 2,
@@ -973,7 +1232,14 @@
    "sprintPos": 9,
    "cumulative": 8,
    "standing": 8,
-   "started": true
+   "started": true,
+   "qualiPos": 8,
+   "grid": 8,
+   "retired": "Coolant leak",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.678,
+   "pitTotal": 23.678
   },
   {
    "round": 2,
@@ -986,7 +1252,14 @@
    "sprintPos": 17,
    "cumulative": 0,
    "standing": 21,
-   "started": true
+   "started": true,
+   "qualiPos": 19,
+   "grid": 18,
+   "retired": "Vibrations",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.291,
+   "pitTotal": 23.291
   },
   {
    "round": 2,
@@ -999,7 +1272,14 @@
    "sprintPos": 18,
    "cumulative": 0,
    "standing": 22,
-   "started": true
+   "started": true,
+   "qualiPos": 21,
+   "grid": 20,
+   "retired": "Battery",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 2,
@@ -1012,7 +1292,14 @@
    "sprintPos": 6,
    "cumulative": 3,
    "standing": 12,
-   "started": true
+   "started": true,
+   "qualiPos": 5,
+   "grid": 5,
+   "retired": "Electrical",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 2,
@@ -1025,7 +1312,14 @@
    "sprintPos": 4,
    "cumulative": 15,
    "standing": 6,
-   "started": true
+   "started": true,
+   "qualiPos": 6,
+   "grid": 6,
+   "retired": "Electrical",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 2,
@@ -1038,7 +1332,14 @@
    "sprintPos": 13,
    "cumulative": 2,
    "standing": 14,
-   "started": true
+   "started": true,
+   "qualiPos": 16,
+   "grid": 16,
+   "retired": "Hydraulics",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 2,
@@ -1051,7 +1352,14 @@
    "sprintPos": 16,
    "cumulative": 0,
    "standing": 18,
-   "started": true
+   "started": true,
+   "qualiPos": 18,
+   "grid": 22,
+   "retired": "Hydraulics",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 3,
@@ -1064,7 +1372,14 @@
    "sprintPos": null,
    "cumulative": 72,
    "standing": 1,
-   "started": true
+   "started": true,
+   "qualiPos": 1,
+   "grid": 1,
+   "retired": null,
+   "fastestLap": true,
+   "pitStops": 1,
+   "pitBest": 23.288,
+   "pitTotal": 23.288
   },
   {
    "round": 3,
@@ -1077,7 +1392,14 @@
    "sprintPos": null,
    "cumulative": 21,
    "standing": 6,
-   "started": true
+   "started": true,
+   "qualiPos": 3,
+   "grid": 3,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.444,
+   "pitTotal": 23.444
   },
   {
    "round": 3,
@@ -1090,7 +1412,14 @@
    "sprintPos": null,
    "cumulative": 49,
    "standing": 3,
-   "started": true
+   "started": true,
+   "qualiPos": 4,
+   "grid": 4,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 22.992,
+   "pitTotal": 22.992
   },
   {
    "round": 3,
@@ -1103,7 +1432,14 @@
    "sprintPos": null,
    "cumulative": 63,
    "standing": 2,
-   "started": true
+   "started": true,
+   "qualiPos": 2,
+   "grid": 2,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 22.937,
+   "pitTotal": 22.937
   },
   {
    "round": 3,
@@ -1116,7 +1452,14 @@
    "sprintPos": null,
    "cumulative": 25,
    "standing": 5,
-   "started": true
+   "started": true,
+   "qualiPos": 5,
+   "grid": 5,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.316,
+   "pitTotal": 23.316
   },
   {
    "round": 3,
@@ -1129,7 +1472,14 @@
    "sprintPos": null,
    "cumulative": 41,
    "standing": 4,
-   "started": true
+   "started": true,
+   "qualiPos": 6,
+   "grid": 6,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 22.891,
+   "pitTotal": 22.891
   },
   {
    "round": 3,
@@ -1142,7 +1492,14 @@
    "sprintPos": null,
    "cumulative": 15,
    "standing": 8,
-   "started": true
+   "started": true,
+   "qualiPos": 7,
+   "grid": 7,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.304,
+   "pitTotal": 24.304
   },
   {
    "round": 3,
@@ -1155,7 +1512,14 @@
    "sprintPos": null,
    "cumulative": 12,
    "standing": 9,
-   "started": true
+   "started": true,
+   "qualiPos": 11,
+   "grid": 11,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.49,
+   "pitTotal": 24.49
   },
   {
    "round": 3,
@@ -1168,7 +1532,14 @@
    "sprintPos": null,
    "cumulative": 10,
    "standing": 10,
-   "started": true
+   "started": true,
+   "qualiPos": 14,
+   "grid": 14,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.165,
+   "pitTotal": 24.165
   },
   {
    "round": 3,
@@ -1181,7 +1552,14 @@
    "sprintPos": null,
    "cumulative": 1,
    "standing": 15,
-   "started": true
+   "started": true,
+   "qualiPos": 12,
+   "grid": 12,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.629,
+   "pitTotal": 24.629
   },
   {
    "round": 3,
@@ -1194,7 +1572,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 17,
-   "started": true
+   "started": true,
+   "qualiPos": 13,
+   "grid": 13,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.999,
+   "pitTotal": 23.999
   },
   {
    "round": 3,
@@ -1207,7 +1592,14 @@
    "sprintPos": null,
    "cumulative": 4,
    "standing": 12,
-   "started": true
+   "started": true,
+   "qualiPos": 8,
+   "grid": 8,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.698,
+   "pitTotal": 23.698
   },
   {
    "round": 3,
@@ -1220,7 +1612,14 @@
    "sprintPos": null,
    "cumulative": 2,
    "standing": 13,
-   "started": true
+   "started": true,
+   "qualiPos": 9,
+   "grid": 9,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.63,
+   "pitTotal": 24.63
   },
   {
    "round": 3,
@@ -1233,7 +1632,14 @@
    "sprintPos": null,
    "cumulative": 4,
    "standing": 11,
-   "started": true
+   "started": true,
+   "qualiPos": 10,
+   "grid": 10,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 26.335,
+   "pitTotal": 26.335
   },
   {
    "round": 3,
@@ -1246,7 +1652,14 @@
    "sprintPos": null,
    "cumulative": 2,
    "standing": 14,
-   "started": true
+   "started": true,
+   "qualiPos": 16,
+   "grid": 16,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.396,
+   "pitTotal": 24.396
   },
   {
    "round": 3,
@@ -1259,7 +1672,14 @@
    "sprintPos": null,
    "cumulative": 1,
    "standing": 16,
-   "started": true
+   "started": true,
+   "qualiPos": 15,
+   "grid": 15,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.649,
+   "pitTotal": 23.649
   },
   {
    "round": 3,
@@ -1272,7 +1692,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 20,
-   "started": true
+   "started": true,
+   "qualiPos": 19,
+   "grid": 19,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 27.307,
+   "pitTotal": 27.307
   },
   {
    "round": 3,
@@ -1285,7 +1712,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 21,
-   "started": true
+   "started": true,
+   "qualiPos": 21,
+   "grid": 21,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 24.014,
+   "pitTotal": 50.472
   },
   {
    "round": 3,
@@ -1298,7 +1732,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 19,
-   "started": true
+   "started": true,
+   "qualiPos": 20,
+   "grid": 20,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 25.129,
+   "pitTotal": 25.129
   },
   {
    "round": 3,
@@ -1311,7 +1752,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 18,
-   "started": true
+   "started": true,
+   "qualiPos": 17,
+   "grid": 17,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 23.072,
+   "pitTotal": 72.009
   },
   {
    "round": 3,
@@ -1324,7 +1772,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 22,
-   "started": true
+   "started": true,
+   "qualiPos": 22,
+   "grid": 22,
+   "retired": "Mechanical",
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 23.501,
+   "pitTotal": 48.584
   },
   {
    "round": 3,
@@ -1337,7 +1792,14 @@
    "sprintPos": null,
    "cumulative": 17,
    "standing": 7,
-   "started": true
+   "started": true,
+   "qualiPos": 18,
+   "grid": 18,
+   "retired": "Accident",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 25.081,
+   "pitTotal": 25.081
   },
   {
    "round": 4,
@@ -1350,7 +1812,14 @@
    "sprintPos": 6,
    "cumulative": 100,
    "standing": 1,
-   "started": true
+   "started": true,
+   "qualiPos": 1,
+   "grid": 1,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 22.128,
+   "pitTotal": 22.128
   },
   {
    "round": 4,
@@ -1363,7 +1832,14 @@
    "sprintPos": 1,
    "cumulative": 51,
    "standing": 4,
-   "started": true
+   "started": true,
+   "qualiPos": 4,
+   "grid": 4,
+   "retired": null,
+   "fastestLap": true,
+   "pitStops": 1,
+   "pitBest": 22.565,
+   "pitTotal": 22.565
   },
   {
    "round": 4,
@@ -1376,7 +1852,14 @@
    "sprintPos": 2,
    "cumulative": 43,
    "standing": 6,
-   "started": true
+   "started": true,
+   "qualiPos": 7,
+   "grid": 7,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.024,
+   "pitTotal": 23.024
   },
   {
    "round": 4,
@@ -1389,7 +1872,14 @@
    "sprintPos": 4,
    "cumulative": 80,
    "standing": 2,
-   "started": true
+   "started": true,
+   "qualiPos": 5,
+   "grid": 5,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 22.042,
+   "pitTotal": 22.042
   },
   {
    "round": 4,
@@ -1402,7 +1892,14 @@
    "sprintPos": 5,
    "cumulative": 26,
    "standing": 7,
-   "started": true
+   "started": true,
+   "qualiPos": 2,
+   "grid": 2,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 22.547,
+   "pitTotal": 22.547
   },
   {
    "round": 4,
@@ -1415,7 +1912,14 @@
    "sprintPos": 7,
    "cumulative": 51,
    "standing": 5,
-   "started": true
+   "started": true,
+   "qualiPos": 6,
+   "grid": 6,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.779,
+   "pitTotal": 23.779
   },
   {
    "round": 4,
@@ -1428,7 +1932,14 @@
    "sprintPos": 10,
    "cumulative": 7,
    "standing": 11,
-   "started": true
+   "started": true,
+   "qualiPos": 8,
+   "grid": 8,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.093,
+   "pitTotal": 23.093
   },
   {
    "round": 4,
@@ -1441,7 +1952,14 @@
    "sprintPos": 3,
    "cumulative": 59,
    "standing": 3,
-   "started": true
+   "started": true,
+   "qualiPos": 3,
+   "grid": 3,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.386,
+   "pitTotal": 23.386
   },
   {
    "round": 4,
@@ -1454,7 +1972,14 @@
    "sprintPos": 13,
    "cumulative": 4,
    "standing": 14,
-   "started": true
+   "started": true,
+   "qualiPos": 13,
+   "grid": 13,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.595,
+   "pitTotal": 23.595
   },
   {
    "round": 4,
@@ -1467,7 +1992,14 @@
    "sprintPos": 18,
    "cumulative": 1,
    "standing": 17,
-   "started": true
+   "started": true,
+   "qualiPos": 15,
+   "grid": 15,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.016,
+   "pitTotal": 23.016
   },
   {
    "round": 4,
@@ -1480,7 +2012,14 @@
    "sprintPos": 12,
    "cumulative": 17,
    "standing": 8,
-   "started": true
+   "started": true,
+   "qualiPos": 12,
+   "grid": 12,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.474,
+   "pitTotal": 23.474
   },
   {
    "round": 4,
@@ -1493,7 +2032,14 @@
    "sprintPos": "DSQ",
    "cumulative": 2,
    "standing": 15,
-   "started": true
+   "started": true,
+   "qualiPos": 21,
+   "grid": 21,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.986,
+   "pitTotal": 23.986
   },
   {
    "round": 4,
@@ -1506,7 +2052,14 @@
    "sprintPos": 11,
    "cumulative": 1,
    "standing": 16,
-   "started": true
+   "started": true,
+   "qualiPos": 14,
+   "grid": 14,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.027,
+   "pitTotal": 24.027
   },
   {
    "round": 4,
@@ -1519,7 +2072,14 @@
    "sprintPos": "DNS",
    "cumulative": 4,
    "standing": 12,
-   "started": true
+   "started": true,
+   "qualiPos": 16,
+   "grid": 16,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 22.731,
+   "pitTotal": 22.731
   },
   {
    "round": 4,
@@ -1532,7 +2092,14 @@
    "sprintPos": 15,
    "cumulative": 0,
    "standing": 21,
-   "started": true
+   "started": true,
+   "qualiPos": 17,
+   "grid": 17,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.16,
+   "pitTotal": 23.16
   },
   {
    "round": 4,
@@ -1545,7 +2112,14 @@
    "sprintPos": 16,
    "cumulative": 0,
    "standing": 20,
-   "started": true
+   "started": true,
+   "qualiPos": 20,
+   "grid": 20,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.228,
+   "pitTotal": 23.228
   },
   {
    "round": 4,
@@ -1558,7 +2132,14 @@
    "sprintPos": 17,
    "cumulative": 0,
    "standing": 22,
-   "started": true
+   "started": true,
+   "qualiPos": 18,
+   "grid": 18,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 22.09,
+   "pitTotal": 44.72
   },
   {
    "round": 4,
@@ -1571,7 +2152,14 @@
    "sprintPos": 19,
    "cumulative": 0,
    "standing": 19,
-   "started": true
+   "started": true,
+   "qualiPos": 19,
+   "grid": 19,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 23.529,
+   "pitTotal": 47.356
   },
   {
    "round": 4,
@@ -1584,7 +2172,14 @@
    "sprintPos": "DNS",
    "cumulative": 0,
    "standing": 18,
-   "started": true
+   "started": true,
+   "qualiPos": 10,
+   "grid": 10,
+   "retired": "Overheating",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 33.71,
+   "pitTotal": 33.71
   },
   {
    "round": 4,
@@ -1597,7 +2192,14 @@
    "sprintPos": 14,
    "cumulative": 10,
    "standing": 10,
-   "started": true
+   "started": true,
+   "qualiPos": 11,
+   "grid": 11,
+   "retired": "Gearbox",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 4,
@@ -1610,7 +2212,14 @@
    "sprintPos": 8,
    "cumulative": 16,
    "standing": 9,
-   "started": true
+   "started": true,
+   "qualiPos": 9,
+   "grid": 9,
+   "retired": "Collision",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 4,
@@ -1623,7 +2232,14 @@
    "sprintPos": 9,
    "cumulative": 4,
    "standing": 13,
-   "started": true
+   "started": true,
+   "qualiPos": "DSQ",
+   "grid": 22,
+   "retired": "Accident",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 5,
@@ -1636,7 +2252,14 @@
    "sprintPos": 3,
    "cumulative": 131,
    "standing": 1,
-   "started": true
+   "started": true,
+   "qualiPos": 2,
+   "grid": 2,
+   "retired": null,
+   "fastestLap": true,
+   "pitStops": 1,
+   "pitBest": 25.153,
+   "pitTotal": 25.153
   },
   {
    "round": 5,
@@ -1649,7 +2272,14 @@
    "sprintPos": 6,
    "cumulative": 72,
    "standing": 4,
-   "started": true
+   "started": true,
+   "qualiPos": 5,
+   "grid": 5,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 25.936,
+   "pitTotal": 25.936
   },
   {
    "round": 5,
@@ -1662,7 +2292,14 @@
    "sprintPos": 7,
    "cumulative": 43,
    "standing": 7,
-   "started": true
+   "started": true,
+   "qualiPos": 6,
+   "grid": 6,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 25.199,
+   "pitTotal": 25.199
   },
   {
    "round": 5,
@@ -1675,7 +2312,14 @@
    "sprintPos": 5,
    "cumulative": 75,
    "standing": 3,
-   "started": true
+   "started": true,
+   "qualiPos": 8,
+   "grid": 8,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 30.114,
+   "pitTotal": 30.114
   },
   {
    "round": 5,
@@ -1688,7 +2332,14 @@
    "sprintPos": 21,
    "cumulative": 14,
    "standing": 12,
-   "started": true
+   "started": true,
+   "qualiPos": 7,
+   "grid": 7,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.902,
+   "pitTotal": 24.902
   },
   {
    "round": 5,
@@ -1701,7 +2352,14 @@
    "sprintPos": 9,
    "cumulative": 15,
    "standing": 11,
-   "started": true
+   "started": true,
+   "qualiPos": 10,
+   "grid": 10,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 25.64,
+   "pitTotal": 25.64
   },
   {
    "round": 5,
@@ -1714,7 +2372,14 @@
    "sprintPos": 11,
    "cumulative": 16,
    "standing": 10,
-   "started": true
+   "started": true,
+   "qualiPos": 12,
+   "grid": 12,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.177,
+   "pitTotal": 24.177
   },
   {
    "round": 5,
@@ -1727,7 +2392,14 @@
    "sprintPos": 20,
    "cumulative": 20,
    "standing": 8,
-   "started": true
+   "started": true,
+   "qualiPos": 14,
+   "grid": 14,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 25.644,
+   "pitTotal": 25.644
   },
   {
    "round": 5,
@@ -1740,7 +2412,14 @@
    "sprintPos": 10,
    "cumulative": 6,
    "standing": 13,
-   "started": true
+   "started": true,
+   "qualiPos": 15,
+   "grid": 15,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.751,
+   "pitTotal": 24.751
   },
   {
    "round": 5,
@@ -1753,7 +2432,14 @@
    "sprintPos": 18,
    "cumulative": 18,
    "standing": 9,
-   "started": true
+   "started": true,
+   "qualiPos": 16,
+   "grid": 16,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 5,
@@ -1766,7 +2452,14 @@
    "sprintPos": 4,
    "cumulative": 48,
    "standing": 6,
-   "started": true
+   "started": true,
+   "qualiPos": 4,
+   "grid": 4,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 24.121,
+   "pitTotal": 96.851
   },
   {
    "round": 5,
@@ -1779,7 +2472,14 @@
    "sprintPos": 15,
    "cumulative": 0,
    "standing": 18,
-   "started": true
+   "started": true,
+   "qualiPos": 11,
+   "grid": 11,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 24.952,
+   "pitTotal": 55.976
   },
   {
    "round": 5,
@@ -1792,7 +2492,14 @@
    "sprintPos": 12,
    "cumulative": 2,
    "standing": 15,
-   "started": true
+   "started": true,
+   "qualiPos": 13,
+   "grid": 13,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 24.766,
+   "pitTotal": 52.944
   },
   {
    "round": 5,
@@ -1805,7 +2512,14 @@
    "sprintPos": 13,
    "cumulative": 1,
    "standing": 16,
-   "started": true
+   "started": true,
+   "qualiPos": 17,
+   "grid": 17,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 24.833,
+   "pitTotal": 60.184
   },
   {
    "round": 5,
@@ -1818,7 +2532,14 @@
    "sprintPos": 16,
    "cumulative": 0,
    "standing": 21,
-   "started": true
+   "started": true,
+   "qualiPos": 21,
+   "grid": 22,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 24.146,
+   "pitTotal": 48.395
   },
   {
    "round": 5,
@@ -1831,7 +2552,14 @@
    "sprintPos": 17,
    "cumulative": 0,
    "standing": 19,
-   "started": true
+   "started": true,
+   "qualiPos": 22,
+   "grid": 21,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 4,
+   "pitBest": 24.413,
+   "pitTotal": 108.619
   },
   {
    "round": 5,
@@ -1844,7 +2572,14 @@
    "sprintPos": 14,
    "cumulative": 0,
    "standing": 20,
-   "started": true
+   "started": true,
+   "qualiPos": 20,
+   "grid": 20,
+   "retired": "Suspension",
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 24.984,
+   "pitTotal": 75.874
   },
   {
    "round": 5,
@@ -1857,7 +2592,14 @@
    "sprintPos": 2,
    "cumulative": 58,
    "standing": 5,
-   "started": true
+   "started": true,
+   "qualiPos": 3,
+   "grid": 3,
+   "retired": "Gearbox",
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 23.418,
+   "pitTotal": 52.277
   },
   {
    "round": 5,
@@ -1870,7 +2612,14 @@
    "sprintPos": 1,
    "cumulative": 88,
    "standing": 2,
-   "started": true
+   "started": true,
+   "qualiPos": 1,
+   "grid": 1,
+   "retired": "Engine",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 5,
@@ -1883,7 +2632,14 @@
    "sprintPos": "DNF",
    "cumulative": 0,
    "standing": 22,
-   "started": true
+   "started": true,
+   "qualiPos": 19,
+   "grid": 19,
+   "retired": "Broken seat",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.709,
+   "pitTotal": 24.709
   },
   {
    "round": 5,
@@ -1896,7 +2652,14 @@
    "sprintPos": 19,
    "cumulative": 1,
    "standing": 17,
-   "started": true
+   "started": true,
+   "qualiPos": 18,
+   "grid": 18,
+   "retired": "Collision",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 5,
@@ -1909,7 +2672,14 @@
    "sprintPos": 8,
    "cumulative": 5,
    "standing": 14,
-   "started": true
+   "started": true,
+   "qualiPos": 9,
+   "grid": 9,
+   "retired": "Gearbox",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 6,
@@ -1922,7 +2692,14 @@
    "sprintPos": null,
    "cumulative": 156,
    "standing": 1,
-   "started": true
+   "started": true,
+   "qualiPos": 1,
+   "grid": 1,
+   "retired": null,
+   "fastestLap": true,
+   "pitStops": 2,
+   "pitBest": 24.136,
+   "pitTotal": 51.014
   },
   {
    "round": 6,
@@ -1935,7 +2712,14 @@
    "sprintPos": null,
    "cumulative": 90,
    "standing": 2,
-   "started": true
+   "started": true,
+   "qualiPos": 3,
+   "grid": 3,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 24.138,
+   "pitTotal": 55.365
   },
   {
    "round": 6,
@@ -1948,7 +2732,14 @@
    "sprintPos": null,
    "cumulative": 29,
    "standing": 8,
-   "started": true
+   "started": true,
+   "qualiPos": 5,
+   "grid": 5,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.784,
+   "pitTotal": 24.784
   },
   {
    "round": 6,
@@ -1961,7 +2752,14 @@
    "sprintPos": null,
    "cumulative": 60,
    "standing": 5,
-   "started": true
+   "started": true,
+   "qualiPos": 7,
+   "grid": 7,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 24.244,
+   "pitTotal": 55.665
   },
   {
    "round": 6,
@@ -1974,7 +2772,14 @@
    "sprintPos": null,
    "cumulative": 26,
    "standing": 9,
-   "started": true
+   "started": true,
+   "qualiPos": 10,
+   "grid": 10,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 25.622,
+   "pitTotal": 25.622
   },
   {
    "round": 6,
@@ -1987,7 +2792,14 @@
    "sprintPos": null,
    "cumulative": 13,
    "standing": 13,
-   "started": true
+   "started": true,
+   "qualiPos": 15,
+   "grid": 15,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 6,
@@ -2000,7 +2812,14 @@
    "sprintPos": null,
    "cumulative": 26,
    "standing": 10,
-   "started": true
+   "started": true,
+   "qualiPos": 9,
+   "grid": 9,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 25.547,
+   "pitTotal": 25.547
   },
   {
    "round": 6,
@@ -2013,7 +2832,14 @@
    "sprintPos": null,
    "cumulative": 5,
    "standing": 15,
-   "started": true
+   "started": true,
+   "qualiPos": 11,
+   "grid": 11,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 25.553,
+   "pitTotal": 25.553
   },
   {
    "round": 6,
@@ -2026,7 +2852,14 @@
    "sprintPos": null,
    "cumulative": 3,
    "standing": 16,
-   "started": true
+   "started": true,
+   "qualiPos": 17,
+   "grid": 17,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 25.482,
+   "pitTotal": 25.482
   },
   {
    "round": 6,
@@ -2039,7 +2872,14 @@
    "sprintPos": null,
    "cumulative": 1,
    "standing": 18,
-   "started": true
+   "started": true,
+   "qualiPos": 21,
+   "grid": 21,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 24.975,
+   "pitTotal": 51.309
   },
   {
    "round": 6,
@@ -2052,7 +2892,14 @@
    "sprintPos": null,
    "cumulative": 2,
    "standing": 17,
-   "started": true
+   "started": true,
+   "qualiPos": 16,
+   "grid": 22,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 24.69,
+   "pitTotal": 75.441
   },
   {
    "round": 6,
@@ -2065,7 +2912,14 @@
    "sprintPos": null,
    "cumulative": 88,
    "standing": 3,
-   "started": true
+   "started": true,
+   "qualiPos": 6,
+   "grid": 6,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 24.029,
+   "pitTotal": 59.287
   },
   {
    "round": 6,
@@ -2078,7 +2932,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 19,
-   "started": true
+   "started": true,
+   "qualiPos": 13,
+   "grid": 13,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.81,
+   "pitTotal": 24.81
   },
   {
    "round": 6,
@@ -2091,7 +2952,14 @@
    "sprintPos": null,
    "cumulative": 15,
    "standing": 12,
-   "started": true
+   "started": true,
+   "qualiPos": 14,
+   "grid": 14,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 25.797,
+   "pitTotal": 25.797
   },
   {
    "round": 6,
@@ -2104,7 +2972,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 21,
-   "started": true
+   "started": true,
+   "qualiPos": 18,
+   "grid": 18,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 26.005,
+   "pitTotal": 53.143
   },
   {
    "round": 6,
@@ -2117,7 +2992,14 @@
    "sprintPos": null,
    "cumulative": 6,
    "standing": 14,
-   "started": true
+   "started": true,
+   "qualiPos": 12,
+   "grid": 12,
+   "retired": "Collision damage",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 25.662,
+   "pitTotal": 25.662
   },
   {
    "round": 6,
@@ -2130,7 +3012,14 @@
    "sprintPos": null,
    "cumulative": 75,
    "standing": 4,
-   "started": true
+   "started": true,
+   "qualiPos": 4,
+   "grid": 4,
+   "retired": "Accident",
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 25.377,
+   "pitTotal": 60.284
   },
   {
    "round": 6,
@@ -2143,7 +3032,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 22,
-   "started": true
+   "started": true,
+   "qualiPos": 22,
+   "grid": 22,
+   "retired": "Accident",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.803,
+   "pitTotal": 24.803
   },
   {
    "round": 6,
@@ -2156,7 +3052,14 @@
    "sprintPos": null,
    "cumulative": 58,
    "standing": 6,
-   "started": true
+   "started": true,
+   "qualiPos": 8,
+   "grid": 8,
+   "retired": "Battery",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 6,
@@ -2169,7 +3072,14 @@
    "sprintPos": null,
    "cumulative": 18,
    "standing": 11,
-   "started": true
+   "started": true,
+   "qualiPos": 19,
+   "grid": 19,
+   "retired": "Brakes",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 32.127,
+   "pitTotal": 32.127
   },
   {
    "round": 6,
@@ -2182,7 +3092,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 20,
-   "started": true
+   "started": true,
+   "qualiPos": 20,
+   "grid": 20,
+   "retired": "Brakes",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 26.759,
+   "pitTotal": 26.759
   },
   {
    "round": 6,
@@ -2195,7 +3112,14 @@
    "sprintPos": null,
    "cumulative": 43,
    "standing": 7,
-   "started": true
+   "started": true,
+   "qualiPos": 2,
+   "grid": 2,
+   "retired": "Engine",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 7,
@@ -2208,7 +3132,14 @@
    "sprintPos": null,
    "cumulative": 115,
    "standing": 2,
-   "started": true
+   "started": true,
+   "qualiPos": 2,
+   "grid": 2,
+   "retired": null,
+   "fastestLap": true,
+   "pitStops": 3,
+   "pitBest": 22.477,
+   "pitTotal": 67.794
   },
   {
    "round": 7,
@@ -2221,7 +3152,14 @@
    "sprintPos": null,
    "cumulative": 106,
    "standing": 3,
-   "started": true
+   "started": true,
+   "qualiPos": 1,
+   "grid": 1,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.677,
+   "pitTotal": 43.757
   },
   {
    "round": 7,
@@ -2234,7 +3172,14 @@
    "sprintPos": null,
    "cumulative": 73,
    "standing": 5,
-   "started": true
+   "started": true,
+   "qualiPos": 4,
+   "grid": 4,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.791,
+   "pitTotal": 43.832
   },
   {
    "round": 7,
@@ -2247,7 +3192,14 @@
    "sprintPos": null,
    "cumulative": 55,
    "standing": 7,
-   "started": true
+   "started": true,
+   "qualiPos": 5,
+   "grid": 5,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 22.273,
+   "pitTotal": 69.248
   },
   {
    "round": 7,
@@ -2260,7 +3212,14 @@
    "sprintPos": null,
    "cumulative": 70,
    "standing": 6,
-   "started": true
+   "started": true,
+   "qualiPos": 7,
+   "grid": 7,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.776,
+   "pitTotal": 44.437
   },
   {
    "round": 7,
@@ -2273,7 +3232,14 @@
    "sprintPos": null,
    "cumulative": 37,
    "standing": 8,
-   "started": true
+   "started": true,
+   "qualiPos": 6,
+   "grid": 6,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 21.949,
+   "pitTotal": 66.921
   },
   {
    "round": 7,
@@ -2286,7 +3252,14 @@
    "sprintPos": null,
    "cumulative": 32,
    "standing": 9,
-   "started": true
+   "started": true,
+   "qualiPos": 14,
+   "grid": 14,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 22.682,
+   "pitTotal": 45.992
   },
   {
    "round": 7,
@@ -2299,7 +3272,14 @@
    "sprintPos": null,
    "cumulative": 30,
    "standing": 10,
-   "started": true
+   "started": true,
+   "qualiPos": 8,
+   "grid": 8,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 23.172,
+   "pitTotal": 49.155
   },
   {
    "round": 7,
@@ -2312,7 +3292,14 @@
    "sprintPos": null,
    "cumulative": 15,
    "standing": 13,
-   "started": true
+   "started": true,
+   "qualiPos": 11,
+   "grid": 11,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 22.476,
+   "pitTotal": 46.486
   },
   {
    "round": 7,
@@ -2325,7 +3312,14 @@
    "sprintPos": null,
    "cumulative": 16,
    "standing": 12,
-   "started": true
+   "started": true,
+   "qualiPos": 13,
+   "grid": 13,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 22.29,
+   "pitTotal": 45.273
   },
   {
    "round": 7,
@@ -2338,7 +3332,14 @@
    "sprintPos": null,
    "cumulative": 2,
    "standing": 17,
-   "started": true
+   "started": true,
+   "qualiPos": 12,
+   "grid": 12,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 22.285,
+   "pitTotal": 70.983
   },
   {
    "round": 7,
@@ -2351,7 +3352,14 @@
    "sprintPos": null,
    "cumulative": 6,
    "standing": 14,
-   "started": true
+   "started": true,
+   "qualiPos": 16,
+   "grid": 16,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 22.595,
+   "pitTotal": 68.344
   },
   {
    "round": 7,
@@ -2364,7 +3372,14 @@
    "sprintPos": null,
    "cumulative": 3,
    "standing": 16,
-   "started": true
+   "started": true,
+   "qualiPos": 17,
+   "grid": 17,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 22.965,
+   "pitTotal": 72.67
   },
   {
    "round": 7,
@@ -2377,7 +3392,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 21,
-   "started": true
+   "started": true,
+   "qualiPos": 19,
+   "grid": 19,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 23.912,
+   "pitTotal": 73.149
   },
   {
    "round": 7,
@@ -2390,7 +3412,14 @@
    "sprintPos": null,
    "cumulative": 75,
    "standing": 4,
-   "started": true
+   "started": true,
+   "qualiPos": 10,
+   "grid": 10,
+   "retired": "Hydraulics",
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 22.125,
+   "pitTotal": 44.374
   },
   {
    "round": 7,
@@ -2403,7 +3432,14 @@
    "sprintPos": null,
    "cumulative": 156,
    "standing": 1,
-   "started": true
+   "started": true,
+   "qualiPos": 3,
+   "grid": 3,
+   "retired": "Electrical",
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 22.038,
+   "pitTotal": 44.248
   },
   {
    "round": 7,
@@ -2416,7 +3452,14 @@
    "sprintPos": null,
    "cumulative": 18,
    "standing": 11,
-   "started": true
+   "started": true,
+   "qualiPos": 15,
+   "grid": 15,
+   "retired": "Engine",
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 23.118,
+   "pitTotal": 47.019
   },
   {
    "round": 7,
@@ -2429,7 +3472,14 @@
    "sprintPos": null,
    "cumulative": 5,
    "standing": 15,
-   "started": true
+   "started": true,
+   "qualiPos": 18,
+   "grid": 18,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 22.027,
+   "pitTotal": 68.735
   },
   {
    "round": 7,
@@ -2442,7 +3492,14 @@
    "sprintPos": null,
    "cumulative": 1,
    "standing": 18,
-   "started": true
+   "started": true,
+   "qualiPos": 22,
+   "grid": 22,
+   "retired": "Battery",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 22.22,
+   "pitTotal": 22.22
   },
   {
    "round": 7,
@@ -2455,7 +3512,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 19,
-   "started": true
+   "started": true,
+   "qualiPos": 9,
+   "grid": 9,
+   "retired": "Safety switch",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 22.869,
+   "pitTotal": 22.869
   },
   {
    "round": 7,
@@ -2468,7 +3532,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 20,
-   "started": true
+   "started": true,
+   "qualiPos": 20,
+   "grid": 20,
+   "retired": "Overheating",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.28,
+   "pitTotal": 23.28
   },
   {
    "round": 7,
@@ -2481,7 +3552,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 22,
-   "started": true
+   "started": true,
+   "qualiPos": 21,
+   "grid": 21,
+   "retired": "Gearbox",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 8,
@@ -2494,7 +3572,14 @@
    "sprintPos": null,
    "cumulative": 131,
    "standing": 2,
-   "started": true
+   "started": true,
+   "qualiPos": 1,
+   "grid": 1,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.204,
+   "pitTotal": 42.425
   },
   {
    "round": 8,
@@ -2507,7 +3592,14 @@
    "sprintPos": null,
    "cumulative": 73,
    "standing": 7,
-   "started": true
+   "started": true,
+   "qualiPos": 5,
+   "grid": 5,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.252,
+   "pitTotal": 42.569
   },
   {
    "round": 8,
@@ -2520,7 +3612,14 @@
    "sprintPos": null,
    "cumulative": 171,
    "standing": 1,
-   "started": true
+   "started": true,
+   "qualiPos": 4,
+   "grid": 4,
+   "retired": null,
+   "fastestLap": true,
+   "pitStops": 2,
+   "pitBest": 21.413,
+   "pitTotal": 42.915
   },
   {
    "round": 8,
@@ -2533,7 +3632,14 @@
    "sprintPos": null,
    "cumulative": 82,
    "standing": 4,
-   "started": true
+   "started": true,
+   "qualiPos": 7,
+   "grid": 7,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.209,
+   "pitTotal": 43.286
   },
   {
    "round": 8,
@@ -2546,7 +3652,14 @@
    "sprintPos": null,
    "cumulative": 125,
    "standing": 3,
-   "started": true
+   "started": true,
+   "qualiPos": 3,
+   "grid": 3,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 21.25,
+   "pitTotal": 63.886
   },
   {
    "round": 8,
@@ -2559,7 +3672,14 @@
    "sprintPos": null,
    "cumulative": 45,
    "standing": 8,
-   "started": true
+   "started": true,
+   "qualiPos": 8,
+   "grid": 8,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.268,
+   "pitTotal": 43.038
   },
   {
    "round": 8,
@@ -2572,7 +3692,14 @@
    "sprintPos": null,
    "cumulative": 79,
    "standing": 5,
-   "started": true
+   "started": true,
+   "qualiPos": 6,
+   "grid": 6,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.578,
+   "pitTotal": 43.394
   },
   {
    "round": 8,
@@ -2585,7 +3712,14 @@
    "sprintPos": null,
    "cumulative": 79,
    "standing": 6,
-   "started": true
+   "started": true,
+   "qualiPos": 2,
+   "grid": 2,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 21.02,
+   "pitTotal": 65.489
   },
   {
    "round": 8,
@@ -2598,7 +3732,14 @@
    "sprintPos": null,
    "cumulative": 32,
    "standing": 9,
-   "started": true
+   "started": true,
+   "qualiPos": 9,
+   "grid": 9,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.545,
+   "pitTotal": 43.567
   },
   {
    "round": 8,
@@ -2611,7 +3752,14 @@
    "sprintPos": null,
    "cumulative": 16,
    "standing": 13,
-   "started": true
+   "started": true,
+   "qualiPos": 10,
+   "grid": 10,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.408,
+   "pitTotal": 42.959
   },
   {
    "round": 8,
@@ -2624,7 +3772,14 @@
    "sprintPos": null,
    "cumulative": 2,
    "standing": 17,
-   "started": true
+   "started": true,
+   "qualiPos": 12,
+   "grid": 12,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.877,
+   "pitTotal": 44.482
   },
   {
    "round": 8,
@@ -2637,7 +3792,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 19,
-   "started": true
+   "started": true,
+   "qualiPos": 14,
+   "grid": 14,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.585,
+   "pitTotal": 44.176
   },
   {
    "round": 8,
@@ -2650,7 +3812,14 @@
    "sprintPos": null,
    "cumulative": 32,
    "standing": 10,
-   "started": true
+   "started": true,
+   "qualiPos": 11,
+   "grid": 11,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 21.212,
+   "pitTotal": 64.392
   },
   {
    "round": 8,
@@ -2663,7 +3832,14 @@
    "sprintPos": null,
    "cumulative": 18,
    "standing": 11,
-   "started": true
+   "started": true,
+   "qualiPos": 13,
+   "grid": 13,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.593,
+   "pitTotal": 43.637
   },
   {
    "round": 8,
@@ -2676,7 +3852,14 @@
    "sprintPos": null,
    "cumulative": 16,
    "standing": 12,
-   "started": true
+   "started": true,
+   "qualiPos": 16,
+   "grid": 16,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.446,
+   "pitTotal": 43.007
   },
   {
    "round": 8,
@@ -2689,7 +3872,14 @@
    "sprintPos": null,
    "cumulative": 3,
    "standing": 16,
-   "started": true
+   "started": true,
+   "qualiPos": 15,
+   "grid": 15,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.878,
+   "pitTotal": 47.333
   },
   {
    "round": 8,
@@ -2702,7 +3892,14 @@
    "sprintPos": null,
    "cumulative": 5,
    "standing": 15,
-   "started": true
+   "started": true,
+   "qualiPos": 18,
+   "grid": 18,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.249,
+   "pitTotal": 42.519
   },
   {
    "round": 8,
@@ -2715,7 +3912,14 @@
    "sprintPos": null,
    "cumulative": 1,
    "standing": 18,
-   "started": true
+   "started": true,
+   "qualiPos": 21,
+   "grid": 21,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 22.358,
+   "pitTotal": 51.071
   },
   {
    "round": 8,
@@ -2728,7 +3932,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 22,
-   "started": true
+   "started": true,
+   "qualiPos": 22,
+   "grid": 22,
+   "retired": "Electrical",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.522,
+   "pitTotal": 23.522
   },
   {
    "round": 8,
@@ -2741,7 +3952,14 @@
    "sprintPos": null,
    "cumulative": 6,
    "standing": 14,
-   "started": true
+   "started": true,
+   "qualiPos": 17,
+   "grid": 17,
+   "retired": "Electrical",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 21.371,
+   "pitTotal": 21.371
   },
   {
    "round": 8,
@@ -2754,7 +3972,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 21,
-   "started": true
+   "started": true,
+   "qualiPos": 19,
+   "grid": 19,
+   "retired": "Brakes",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 8,
@@ -2767,7 +3992,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 20,
-   "started": true
+   "started": true,
+   "qualiPos": 20,
+   "grid": 20,
+   "retired": "Brakes",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 9,
@@ -2780,7 +4012,14 @@
    "sprintPos": 5,
    "cumulative": 108,
    "standing": 4,
-   "started": true
+   "started": true,
+   "qualiPos": 2,
+   "grid": 2,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 28.444,
+   "pitTotal": 57.331
   },
   {
    "round": 9,
@@ -2793,7 +4032,14 @@
    "sprintPos": 4,
    "cumulative": 154,
    "standing": 2,
-   "started": true
+   "started": true,
+   "qualiPos": 4,
+   "grid": 4,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 28.337,
+   "pitTotal": 57.0
   },
   {
    "round": 9,
@@ -2806,7 +4052,14 @@
    "sprintPos": 2,
    "cumulative": 147,
    "standing": 3,
-   "started": true
+   "started": true,
+   "qualiPos": 3,
+   "grid": 3,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 28.732,
+   "pitTotal": 63.596
   },
   {
    "round": 9,
@@ -2819,7 +4072,14 @@
    "sprintPos": 3,
    "cumulative": 97,
    "standing": 5,
-   "started": true
+   "started": true,
+   "qualiPos": 6,
+   "grid": 6,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 28.475,
+   "pitTotal": 87.126
   },
   {
    "round": 9,
@@ -2832,7 +4092,14 @@
    "sprintPos": 9,
    "cumulative": 55,
    "standing": 8,
-   "started": true
+   "started": true,
+   "qualiPos": 5,
+   "grid": 5,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 29.672,
+   "pitTotal": 59.644
   },
   {
    "round": 9,
@@ -2845,7 +4112,14 @@
    "sprintPos": 8,
    "cumulative": 41,
    "standing": 9,
-   "started": true
+   "started": true,
+   "qualiPos": 10,
+   "grid": 10,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 28.577,
+   "pitTotal": 57.323
   },
   {
    "round": 9,
@@ -2858,7 +4132,14 @@
    "sprintPos": 10,
    "cumulative": 22,
    "standing": 11,
-   "started": true
+   "started": true,
+   "qualiPos": 9,
+   "grid": 9,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 28.974,
+   "pitTotal": 61.117
   },
   {
    "round": 9,
@@ -2871,7 +4152,14 @@
    "sprintPos": 13,
    "cumulative": 6,
    "standing": 14,
-   "started": true
+   "started": true,
+   "qualiPos": 11,
+   "grid": 11,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 28.662,
+   "pitTotal": 58.588
   },
   {
    "round": 9,
@@ -2884,7 +4172,14 @@
    "sprintPos": 12,
    "cumulative": 18,
    "standing": 13,
-   "started": true
+   "started": true,
+   "qualiPos": 19,
+   "grid": 19,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 29.36,
+   "pitTotal": 58.821
   },
   {
    "round": 9,
@@ -2897,7 +4192,14 @@
    "sprintPos": 11,
    "cumulative": 33,
    "standing": 10,
-   "started": true
+   "started": true,
+   "qualiPos": 12,
+   "grid": 15,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 28.737,
+   "pitTotal": 62.345
   },
   {
    "round": 9,
@@ -2910,7 +4212,14 @@
    "sprintPos": 7,
    "cumulative": 84,
    "standing": 6,
-   "started": true
+   "started": true,
+   "qualiPos": 8,
+   "grid": 8,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 29.081,
+   "pitTotal": 99.149
   },
   {
    "round": 9,
@@ -2923,7 +4232,14 @@
    "sprintPos": 14,
    "cumulative": 18,
    "standing": 12,
-   "started": true
+   "started": true,
+   "qualiPos": 14,
+   "grid": 13,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 29.971,
+   "pitTotal": 60.245
   },
   {
    "round": 9,
@@ -2936,7 +4252,14 @@
    "sprintPos": 16,
    "cumulative": 3,
    "standing": 17,
-   "started": true
+   "started": true,
+   "qualiPos": 17,
+   "grid": 17,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 31.212,
+   "pitTotal": 74.465
   },
   {
    "round": 9,
@@ -2949,7 +4272,14 @@
    "sprintPos": 22,
    "cumulative": 0,
    "standing": 21,
-   "started": true
+   "started": true,
+   "qualiPos": 20,
+   "grid": 20,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 29.374,
+   "pitTotal": 59.24
   },
   {
    "round": 9,
@@ -2962,7 +4292,14 @@
    "sprintPos": 1,
    "cumulative": 179,
    "standing": 1,
-   "started": true
+   "started": true,
+   "qualiPos": 1,
+   "grid": 1,
+   "retired": null,
+   "fastestLap": true,
+   "pitStops": 3,
+   "pitBest": 28.948,
+   "pitTotal": 103.813
   },
   {
    "round": 9,
@@ -2975,7 +4312,14 @@
    "sprintPos": 19,
    "cumulative": 0,
    "standing": 20,
-   "started": true
+   "started": true,
+   "qualiPos": 18,
+   "grid": 18,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 29.584,
+   "pitTotal": 61.183
   },
   {
    "round": 9,
@@ -2988,7 +4332,14 @@
    "sprintPos": 17,
    "cumulative": 6,
    "standing": 15,
-   "started": true
+   "started": true,
+   "qualiPos": 15,
+   "grid": 14,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 28.894,
+   "pitTotal": 58.113
   },
   {
    "round": 9,
@@ -3001,7 +4352,14 @@
    "sprintPos": 20,
    "cumulative": 1,
    "standing": 18,
-   "started": true
+   "started": true,
+   "qualiPos": 22,
+   "grid": 22,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 28.732,
+   "pitTotal": 58.696
   },
   {
    "round": 9,
@@ -3014,7 +4372,14 @@
    "sprintPos": 21,
    "cumulative": 0,
    "standing": 22,
-   "started": true
+   "started": true,
+   "qualiPos": 21,
+   "grid": 22,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 28.734,
+   "pitTotal": 74.968
   },
   {
    "round": 9,
@@ -3027,7 +4392,14 @@
    "sprintPos": 6,
    "cumulative": 76,
    "standing": 7,
-   "started": true
+   "started": true,
+   "qualiPos": 7,
+   "grid": 7,
+   "retired": "Spun off",
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 28.738,
+   "pitTotal": 57.688
   },
   {
    "round": 9,
@@ -3040,7 +4412,14 @@
    "sprintPos": 18,
    "cumulative": 5,
    "standing": 16,
-   "started": true
+   "started": true,
+   "qualiPos": 16,
+   "grid": 16,
+   "retired": "Collision damage",
+   "fastestLap": false,
+   "pitStops": 5,
+   "pitBest": 31.474,
+   "pitTotal": 189.127
   },
   {
    "round": 9,
@@ -3053,7 +4432,14 @@
    "sprintPos": 15,
    "cumulative": 0,
    "standing": 19,
-   "started": true
+   "started": true,
+   "qualiPos": 13,
+   "grid": 12,
+   "retired": "Gearbox",
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 28.979,
+   "pitTotal": 64.837
   },
   {
    "round": 10,
@@ -3066,7 +4452,14 @@
    "sprintPos": null,
    "cumulative": 204,
    "standing": 1,
-   "started": true
+   "started": true,
+   "qualiPos": 1,
+   "grid": 1,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.093,
+   "pitTotal": 23.093
   },
   {
    "round": 10,
@@ -3079,7 +4472,14 @@
    "sprintPos": null,
    "cumulative": 126,
    "standing": 4,
-   "started": true
+   "started": true,
+   "qualiPos": 5,
+   "grid": 4,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.164,
+   "pitTotal": 23.164
   },
   {
    "round": 10,
@@ -3092,7 +4492,14 @@
    "sprintPos": null,
    "cumulative": 91,
    "standing": 7,
-   "started": true
+   "started": true,
+   "qualiPos": 2,
+   "grid": 2,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.128,
+   "pitTotal": 23.128
   },
   {
    "round": 10,
@@ -3105,7 +4512,14 @@
    "sprintPos": null,
    "cumulative": 159,
    "standing": 2,
-   "started": true
+   "started": true,
+   "qualiPos": 6,
+   "grid": 5,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 32.201,
+   "pitTotal": 32.201
   },
   {
    "round": 10,
@@ -3118,7 +4532,14 @@
    "sprintPos": null,
    "cumulative": 94,
    "standing": 6,
-   "started": true
+   "started": true,
+   "qualiPos": 7,
+   "grid": 6,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.292,
+   "pitTotal": 23.292
   },
   {
    "round": 10,
@@ -3131,7 +4552,14 @@
    "sprintPos": null,
    "cumulative": 63,
    "standing": 8,
-   "started": true
+   "started": true,
+   "qualiPos": 10,
+   "grid": 21,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 22.997,
+   "pitTotal": 71.88
   },
   {
    "round": 10,
@@ -3144,7 +4572,14 @@
    "sprintPos": null,
    "cumulative": 103,
    "standing": 5,
-   "started": true
+   "started": true,
+   "qualiPos": 3,
+   "grid": 13,
+   "retired": null,
+   "fastestLap": true,
+   "pitStops": 1,
+   "pitBest": 28.314,
+   "pitTotal": 28.314
   },
   {
    "round": 10,
@@ -3157,7 +4592,14 @@
    "sprintPos": null,
    "cumulative": 10,
    "standing": 14,
-   "started": true
+   "started": true,
+   "qualiPos": 9,
+   "grid": 8,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.127,
+   "pitTotal": 23.127
   },
   {
    "round": 10,
@@ -3170,7 +4612,14 @@
    "sprintPos": null,
    "cumulative": 24,
    "standing": 11,
-   "started": true
+   "started": true,
+   "qualiPos": 8,
+   "grid": 7,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.81,
+   "pitTotal": 24.81
   },
   {
    "round": 10,
@@ -3183,7 +4632,14 @@
    "sprintPos": null,
    "cumulative": 19,
    "standing": 12,
-   "started": true
+   "started": true,
+   "qualiPos": 13,
+   "grid": 11,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.146,
+   "pitTotal": 24.146
   },
   {
    "round": 10,
@@ -3196,7 +4652,14 @@
    "sprintPos": null,
    "cumulative": 33,
    "standing": 10,
-   "started": true
+   "started": true,
+   "qualiPos": 12,
+   "grid": 10,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.177,
+   "pitTotal": 24.177
   },
   {
    "round": 10,
@@ -3209,7 +4672,14 @@
    "sprintPos": null,
    "cumulative": 41,
    "standing": 9,
-   "started": true
+   "started": true,
+   "qualiPos": 11,
+   "grid": 9,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.722,
+   "pitTotal": 23.722
   },
   {
    "round": 10,
@@ -3222,7 +4692,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 19,
-   "started": true
+   "started": true,
+   "qualiPos": 14,
+   "grid": 12,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 26.098,
+   "pitTotal": 26.098
   },
   {
    "round": 10,
@@ -3235,7 +4712,14 @@
    "sprintPos": null,
    "cumulative": 18,
    "standing": 13,
-   "started": true
+   "started": true,
+   "qualiPos": 16,
+   "grid": 14,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 26.554,
+   "pitTotal": 55.536
   },
   {
    "round": 10,
@@ -3248,7 +4732,14 @@
    "sprintPos": null,
    "cumulative": 5,
    "standing": 16,
-   "started": true
+   "started": true,
+   "qualiPos": 17,
+   "grid": 15,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 22.638,
+   "pitTotal": 22.638
   },
   {
    "round": 10,
@@ -3261,7 +4752,14 @@
    "sprintPos": null,
    "cumulative": 6,
    "standing": 15,
-   "started": true
+   "started": true,
+   "qualiPos": 15,
+   "grid": 19,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 34.841,
+   "pitTotal": 34.841
   },
   {
    "round": 10,
@@ -3274,7 +4772,14 @@
    "sprintPos": null,
    "cumulative": 3,
    "standing": 17,
-   "started": true
+   "started": true,
+   "qualiPos": 18,
+   "grid": 16,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 24.124,
+   "pitTotal": 57.864
   },
   {
    "round": 10,
@@ -3287,7 +4792,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 20,
-   "started": true
+   "started": true,
+   "qualiPos": 19,
+   "grid": 17,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 25.91,
+   "pitTotal": 56.504
   },
   {
    "round": 10,
@@ -3300,7 +4812,14 @@
    "sprintPos": null,
    "cumulative": 1,
    "standing": 18,
-   "started": true
+   "started": true,
+   "qualiPos": 21,
+   "grid": 22,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 23.19,
+   "pitTotal": 47.936
   },
   {
    "round": 10,
@@ -3313,7 +4832,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 22,
-   "started": true
+   "started": true,
+   "qualiPos": 22,
+   "grid": 20,
+   "retired": "Gearbox",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 31.649,
+   "pitTotal": 31.649
   },
   {
    "round": 10,
@@ -3326,7 +4852,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 21,
-   "started": true
+   "started": true,
+   "qualiPos": 20,
+   "grid": 18,
+   "retired": "Suspension",
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 25.372,
+   "pitTotal": 52.989
   },
   {
    "round": 10,
@@ -3339,7 +4872,14 @@
    "sprintPos": null,
    "cumulative": 154,
    "standing": 3,
-   "started": true
+   "started": true,
+   "qualiPos": 4,
+   "grid": 3,
+   "retired": "Collision",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 11,
@@ -3352,7 +4892,14 @@
    "sprintPos": null,
    "cumulative": 128,
    "standing": 5,
-   "started": true
+   "started": true,
+   "qualiPos": 1,
+   "grid": 1,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 21.878,
+   "pitTotal": 66.137
   },
   {
    "round": 11,
@@ -3365,7 +4912,14 @@
    "sprintPos": null,
    "cumulative": 109,
    "standing": 6,
-   "started": true
+   "started": true,
+   "qualiPos": 6,
+   "grid": 4,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.625,
+   "pitTotal": 43.64
   },
   {
    "round": 11,
@@ -3378,7 +4932,14 @@
    "sprintPos": null,
    "cumulative": 219,
    "standing": 1,
-   "started": true
+   "started": true,
+   "qualiPos": 4,
+   "grid": 7,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 21.326,
+   "pitTotal": 21.326
   },
   {
    "round": 11,
@@ -3391,7 +4952,14 @@
    "sprintPos": null,
    "cumulative": 138,
    "standing": 4,
-   "started": true
+   "started": true,
+   "qualiPos": 3,
+   "grid": 2,
+   "retired": null,
+   "fastestLap": true,
+   "pitStops": 3,
+   "pitBest": 21.763,
+   "pitTotal": 65.639
   },
   {
    "round": 11,
@@ -3404,7 +4972,14 @@
    "sprintPos": null,
    "cumulative": 169,
    "standing": 2,
-   "started": true
+   "started": true,
+   "qualiPos": 2,
+   "grid": 5,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 21.693,
+   "pitTotal": 65.861
   },
   {
    "round": 11,
@@ -3417,7 +4992,14 @@
    "sprintPos": null,
    "cumulative": 71,
    "standing": 8,
-   "started": true
+   "started": true,
+   "qualiPos": 8,
+   "grid": 8,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.822,
+   "pitTotal": 44.033
   },
   {
    "round": 11,
@@ -3430,7 +5012,14 @@
    "sprintPos": null,
    "cumulative": 160,
    "standing": 3,
-   "started": true
+   "started": true,
+   "qualiPos": 7,
+   "grid": 6,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 22.019,
+   "pitTotal": 44.266
   },
   {
    "round": 11,
@@ -3443,7 +5032,14 @@
    "sprintPos": null,
    "cumulative": 45,
    "standing": 9,
-   "started": true
+   "started": true,
+   "qualiPos": 11,
+   "grid": 11,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.598,
+   "pitTotal": 43.521
   },
   {
    "round": 11,
@@ -3456,7 +5052,14 @@
    "sprintPos": null,
    "cumulative": 2,
    "standing": 18,
-   "started": true
+   "started": true,
+   "qualiPos": 10,
+   "grid": 10,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.42,
+   "pitTotal": 43.606
   },
   {
    "round": 11,
@@ -3469,7 +5072,14 @@
    "sprintPos": null,
    "cumulative": 25,
    "standing": 11,
-   "started": true
+   "started": true,
+   "qualiPos": 9,
+   "grid": 9,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 21.395,
+   "pitTotal": 21.395
   },
   {
    "round": 11,
@@ -3482,7 +5092,14 @@
    "sprintPos": null,
    "cumulative": 10,
    "standing": 14,
-   "started": true
+   "started": true,
+   "qualiPos": 14,
+   "grid": 14,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 21.749,
+   "pitTotal": 21.749
   },
   {
    "round": 11,
@@ -3495,7 +5112,14 @@
    "sprintPos": null,
    "cumulative": 33,
    "standing": 10,
-   "started": true
+   "started": true,
+   "qualiPos": 12,
+   "grid": 12,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 21.458,
+   "pitTotal": 64.772
   },
   {
    "round": 11,
@@ -3508,7 +5132,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 20,
-   "started": true
+   "started": true,
+   "qualiPos": 20,
+   "grid": 20,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.789,
+   "pitTotal": 46.03
   },
   {
    "round": 11,
@@ -3521,7 +5152,14 @@
    "sprintPos": null,
    "cumulative": 1,
    "standing": 19,
-   "started": true
+   "started": true,
+   "qualiPos": 16,
+   "grid": 16,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 22.175,
+   "pitTotal": 44.788
   },
   {
    "round": 11,
@@ -3534,7 +5172,14 @@
    "sprintPos": null,
    "cumulative": 19,
    "standing": 12,
-   "started": true
+   "started": true,
+   "qualiPos": 13,
+   "grid": 13,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 22.206,
+   "pitTotal": 45.201
   },
   {
    "round": 11,
@@ -3547,7 +5192,14 @@
    "sprintPos": null,
    "cumulative": 3,
    "standing": 17,
-   "started": true
+   "started": true,
+   "qualiPos": 15,
+   "grid": 15,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 22.399,
+   "pitTotal": 44.904
   },
   {
    "round": 11,
@@ -3560,7 +5212,14 @@
    "sprintPos": null,
    "cumulative": 5,
    "standing": 16,
-   "started": true
+   "started": true,
+   "qualiPos": 19,
+   "grid": 19,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 22.105,
+   "pitTotal": 44.862
   },
   {
    "round": 11,
@@ -3573,7 +5232,14 @@
    "sprintPos": null,
    "cumulative": 6,
    "standing": 15,
-   "started": true
+   "started": true,
+   "qualiPos": 18,
+   "grid": 18,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 21.614,
+   "pitTotal": 72.354
   },
   {
    "round": 11,
@@ -3586,7 +5252,14 @@
    "sprintPos": null,
    "cumulative": 18,
    "standing": 13,
-   "started": true
+   "started": true,
+   "qualiPos": 17,
+   "grid": 17,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 22.336,
+   "pitTotal": 44.84
   },
   {
    "round": 11,
@@ -3599,7 +5272,14 @@
    "sprintPos": null,
    "cumulative": 94,
    "standing": 7,
-   "started": true
+   "started": true,
+   "qualiPos": 5,
+   "grid": 3,
+   "retired": "Gearbox",
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.72,
+   "pitTotal": 43.485
   },
   {
    "round": 11,
@@ -3612,7 +5292,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 22,
-   "started": true
+   "started": true,
+   "qualiPos": 22,
+   "grid": 22,
+   "retired": "Suspension",
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 23.212,
+   "pitTotal": 47.473
   },
   {
    "round": 11,
@@ -3625,7 +5312,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 21,
-   "started": true
+   "started": true,
+   "qualiPos": 21,
+   "grid": 21,
+   "retired": "Brakes",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 12,
@@ -3638,7 +5332,14 @@
    "sprintPos": 3,
    "cumulative": 159,
    "standing": 4,
-   "started": true
+   "started": true,
+   "qualiPos": 1,
+   "grid": 1,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 17.552,
+   "pitTotal": 35.626
   },
   {
    "round": 12,
@@ -3651,7 +5352,14 @@
    "sprintPos": 4,
    "cumulative": 242,
    "standing": 1,
-   "started": true
+   "started": true,
+   "qualiPos": 3,
+   "grid": 3,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 17.767,
+   "pitTotal": 55.706
   },
   {
    "round": 12,
@@ -3664,7 +5372,14 @@
    "sprintPos": 1,
    "cumulative": 183,
    "standing": 2,
-   "started": true
+   "started": true,
+   "qualiPos": 2,
+   "grid": 2,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 17.451,
+   "pitTotal": 35.461
   },
   {
    "round": 12,
@@ -3677,7 +5392,14 @@
    "sprintPos": 7,
    "cumulative": 183,
    "standing": 3,
-   "started": true
+   "started": true,
+   "qualiPos": 5,
+   "grid": 5,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 17.872,
+   "pitTotal": 36.582
   },
   {
    "round": 12,
@@ -3690,7 +5412,14 @@
    "sprintPos": 2,
    "cumulative": 155,
    "standing": 5,
-   "started": true
+   "started": true,
+   "qualiPos": 6,
+   "grid": 6,
+   "retired": null,
+   "fastestLap": true,
+   "pitStops": 3,
+   "pitBest": 18.73,
+   "pitTotal": 57.246
   },
   {
    "round": 12,
@@ -3703,7 +5432,14 @@
    "sprintPos": 5,
    "cumulative": 106,
    "standing": 7,
-   "started": true
+   "started": true,
+   "qualiPos": 4,
+   "grid": 4,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 17.851,
+   "pitTotal": 56.218
   },
   {
    "round": 12,
@@ -3716,7 +5452,14 @@
    "sprintPos": 11,
    "cumulative": 51,
    "standing": 9,
-   "started": true
+   "started": true,
+   "qualiPos": 8,
+   "grid": 8,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 18.256,
+   "pitTotal": 36.924
   },
   {
    "round": 12,
@@ -3729,7 +5472,14 @@
    "sprintPos": "NC",
    "cumulative": 6,
    "standing": 15,
-   "started": true
+   "started": true,
+   "qualiPos": 13,
+   "grid": 13,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 17.082,
+   "pitTotal": 34.853
   },
   {
    "round": 12,
@@ -3742,7 +5492,14 @@
    "sprintPos": 18,
    "cumulative": 3,
    "standing": 19,
-   "started": true
+   "started": true,
+   "qualiPos": 18,
+   "grid": 18,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 17.606,
+   "pitTotal": 17.606
   },
   {
    "round": 12,
@@ -3755,7 +5512,14 @@
    "sprintPos": 8,
    "cumulative": 35,
    "standing": 10,
-   "started": true
+   "started": true,
+   "qualiPos": 11,
+   "grid": 11,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 18.003,
+   "pitTotal": 36.119
   },
   {
    "round": 12,
@@ -3768,7 +5532,14 @@
    "sprintPos": 13,
    "cumulative": 0,
    "standing": 20,
-   "started": true
+   "started": true,
+   "qualiPos": 12,
+   "grid": 12,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 17.824,
+   "pitTotal": 35.843
   },
   {
    "round": 12,
@@ -3781,7 +5552,14 @@
    "sprintPos": 10,
    "cumulative": 25,
    "standing": 11,
-   "started": true
+   "started": true,
+   "qualiPos": 10,
+   "grid": 10,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 18.578,
+   "pitTotal": 18.578
   },
   {
    "round": 12,
@@ -3794,7 +5572,14 @@
    "sprintPos": 9,
    "cumulative": 10,
    "standing": 14,
-   "started": true
+   "started": true,
+   "qualiPos": 9,
+   "grid": 9,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 17.519,
+   "pitTotal": 54.808
   },
   {
    "round": 12,
@@ -3807,7 +5592,14 @@
    "sprintPos": 12,
    "cumulative": 19,
    "standing": 12,
-   "started": true
+   "started": true,
+   "qualiPos": 14,
+   "grid": 14,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 18.355,
+   "pitTotal": 37.832
   },
   {
    "round": 12,
@@ -3820,7 +5612,14 @@
    "sprintPos": 21,
    "cumulative": 0,
    "standing": 23,
-   "started": true
+   "started": true,
+   "qualiPos": 22,
+   "grid": 22,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 18.424,
+   "pitTotal": 36.988
   },
   {
    "round": 12,
@@ -3833,7 +5632,14 @@
    "sprintPos": 20,
    "cumulative": 6,
    "standing": 16,
-   "started": true
+   "started": true,
+   "qualiPos": 17,
+   "grid": 17,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 17.814,
+   "pitTotal": 35.861
   },
   {
    "round": 12,
@@ -3846,7 +5652,14 @@
    "sprintPos": 16,
    "cumulative": 5,
    "standing": 17,
-   "started": true
+   "started": true,
+   "qualiPos": 16,
+   "grid": 16,
+   "retired": "Collision damage",
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 17.482,
+   "pitTotal": 35.074
   },
   {
    "round": 12,
@@ -3859,7 +5672,14 @@
    "sprintPos": 19,
    "cumulative": 0,
    "standing": 22,
-   "started": true
+   "started": true,
+   "qualiPos": 21,
+   "grid": 21,
+   "retired": "Hydraulics",
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 19.658,
+   "pitTotal": 39.703
   },
   {
    "round": 12,
@@ -3872,7 +5692,14 @@
    "sprintPos": 14,
    "cumulative": 3,
    "standing": 18,
-   "started": true
+   "started": true,
+   "qualiPos": 15,
+   "grid": 15,
+   "retired": "Engine",
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 17.965,
+   "pitTotal": 36.627
   },
   {
    "round": 12,
@@ -3885,7 +5712,14 @@
    "sprintPos": 17,
    "cumulative": 0,
    "standing": 21,
-   "started": true
+   "started": true,
+   "qualiPos": 19,
+   "grid": 19,
+   "retired": "Handling",
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 17.2,
+   "pitTotal": 34.845
   },
   {
    "round": 12,
@@ -3898,7 +5732,14 @@
    "sprintPos": 15,
    "cumulative": 18,
    "standing": 13,
-   "started": true
+   "started": true,
+   "qualiPos": 20,
+   "grid": 20,
+   "retired": "Engine",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 12,
@@ -3911,7 +5752,14 @@
    "sprintPos": 6,
    "cumulative": 112,
    "standing": 6,
-   "started": true
+   "started": true,
+   "qualiPos": 7,
+   "grid": 7,
+   "retired": "Accident",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 12,
@@ -3924,7 +5772,14 @@
    "sprintPos": null,
    "cumulative": 71,
    "standing": 8,
-   "started": false
+   "started": false,
+   "qualiPos": null,
+   "grid": null,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 13,
@@ -3937,7 +5792,14 @@
    "sprintPos": null,
    "cumulative": 267,
    "standing": 1,
-   "started": true
+   "started": true,
+   "qualiPos": 7,
+   "grid": 19,
+   "retired": null,
+   "fastestLap": true,
+   "pitStops": 2,
+   "pitBest": 24.963,
+   "pitTotal": 49.926
   },
   {
    "round": 13,
@@ -3950,7 +5812,14 @@
    "sprintPos": null,
    "cumulative": 201,
    "standing": 2,
-   "started": true
+   "started": true,
+   "qualiPos": 2,
+   "grid": 2,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 13,
@@ -3963,7 +5832,14 @@
    "sprintPos": null,
    "cumulative": 127,
    "standing": 6,
-   "started": true
+   "started": true,
+   "qualiPos": 6,
+   "grid": 5,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 24.933,
+   "pitTotal": 49.866
   },
   {
    "round": 13,
@@ -3976,7 +5852,14 @@
    "sprintPos": null,
    "cumulative": 171,
    "standing": 4,
-   "started": true
+   "started": true,
+   "qualiPos": 9,
+   "grid": 8,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 13,
@@ -3989,7 +5872,14 @@
    "sprintPos": null,
    "cumulative": 116,
    "standing": 7,
-   "started": true
+   "started": true,
+   "qualiPos": 3,
+   "grid": 6,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 13,
@@ -4002,7 +5892,14 @@
    "sprintPos": null,
    "cumulative": 191,
    "standing": 3,
-   "started": true
+   "started": true,
+   "qualiPos": 5,
+   "grid": 4,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 13,
@@ -4015,7 +5912,14 @@
    "sprintPos": null,
    "cumulative": 41,
    "standing": 10,
-   "started": true
+   "started": true,
+   "qualiPos": 1,
+   "grid": 1,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 13,
@@ -4028,7 +5932,14 @@
    "sprintPos": null,
    "cumulative": 29,
    "standing": 11,
-   "started": true
+   "started": true,
+   "qualiPos": 10,
+   "grid": 9,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 13,
@@ -4041,7 +5952,14 @@
    "sprintPos": null,
    "cumulative": 21,
    "standing": 12,
-   "started": true
+   "started": true,
+   "qualiPos": 8,
+   "grid": 7,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 13,
@@ -4054,7 +5972,14 @@
    "sprintPos": null,
    "cumulative": 1,
    "standing": 20,
-   "started": true
+   "started": true,
+   "qualiPos": 17,
+   "grid": 15,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 13,
@@ -4067,7 +5992,14 @@
    "sprintPos": null,
    "cumulative": 10,
    "standing": 14,
-   "started": true
+   "started": true,
+   "qualiPos": 11,
+   "grid": 10,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 13,
@@ -4080,7 +6012,14 @@
    "sprintPos": null,
    "cumulative": 6,
    "standing": 15,
-   "started": true
+   "started": true,
+   "qualiPos": 13,
+   "grid": 12,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 24.246,
+   "pitTotal": 48.492
   },
   {
    "round": 13,
@@ -4093,7 +6032,14 @@
    "sprintPos": null,
    "cumulative": 6,
    "standing": 16,
-   "started": true
+   "started": true,
+   "qualiPos": 15,
+   "grid": 13,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 24.57,
+   "pitTotal": 49.14
   },
   {
    "round": 13,
@@ -4106,7 +6052,14 @@
    "sprintPos": null,
    "cumulative": 51,
    "standing": 9,
-   "started": true
+   "started": true,
+   "qualiPos": 14,
+   "grid": 22,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 31.197,
+   "pitTotal": 62.394
   },
   {
    "round": 13,
@@ -4119,7 +6072,14 @@
    "sprintPos": null,
    "cumulative": 18,
    "standing": 13,
-   "started": true
+   "started": true,
+   "qualiPos": 12,
+   "grid": 11,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 13,
@@ -4132,7 +6092,14 @@
    "sprintPos": null,
    "cumulative": 3,
    "standing": 18,
-   "started": true
+   "started": true,
+   "qualiPos": 16,
+   "grid": 14,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 27.286,
+   "pitTotal": 54.572
   },
   {
    "round": 13,
@@ -4145,7 +6112,14 @@
    "sprintPos": null,
    "cumulative": 5,
    "standing": 17,
-   "started": true
+   "started": true,
+   "qualiPos": 18,
+   "grid": 20,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 26.394,
+   "pitTotal": 52.788
   },
   {
    "round": 13,
@@ -4158,7 +6132,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 23,
-   "started": true
+   "started": true,
+   "qualiPos": 20,
+   "grid": 17,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 28.458,
+   "pitTotal": 56.916
   },
   {
    "round": 13,
@@ -4171,7 +6152,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 22,
-   "started": true
+   "started": true,
+   "qualiPos": 19,
+   "grid": 16,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 35.251,
+   "pitTotal": 70.502
   },
   {
    "round": 13,
@@ -4184,7 +6172,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 21,
-   "started": true
+   "started": true,
+   "qualiPos": 22,
+   "grid": 18,
+   "retired": "Hydraulics",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 13,
@@ -4197,7 +6192,14 @@
    "sprintPos": null,
    "cumulative": 3,
    "standing": 19,
-   "started": true
+   "started": true,
+   "qualiPos": 21,
+   "grid": 22,
+   "retired": "Mechanical",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 13,
@@ -4210,7 +6212,14 @@
    "sprintPos": null,
    "cumulative": 155,
    "standing": 5,
-   "started": true
+   "started": true,
+   "qualiPos": 4,
+   "grid": 3,
+   "retired": "Accident",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 13,
@@ -4223,7 +6232,14 @@
    "sprintPos": null,
    "cumulative": 71,
    "standing": 8,
-   "started": false
+   "started": false,
+   "qualiPos": null,
+   "grid": null,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 14,
@@ -4236,7 +6252,14 @@
    "sprintPos": null,
    "cumulative": 292,
    "standing": 1,
-   "started": true
+   "started": true,
+   "qualiPos": 2,
+   "grid": 2,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 31.843,
+   "pitTotal": 31.843
   },
   {
    "round": 14,
@@ -4249,7 +6272,14 @@
    "sprintPos": null,
    "cumulative": 145,
    "standing": 6,
-   "started": true
+   "started": true,
+   "qualiPos": 3,
+   "grid": 3,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 31.067,
+   "pitTotal": 31.067
   },
   {
    "round": 14,
@@ -4262,7 +6292,14 @@
    "sprintPos": null,
    "cumulative": 186,
    "standing": 4,
-   "started": true
+   "started": true,
+   "qualiPos": 1,
+   "grid": 1,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 35.134,
+   "pitTotal": 35.134
   },
   {
    "round": 14,
@@ -4275,7 +6312,14 @@
    "sprintPos": null,
    "cumulative": 167,
    "standing": 5,
-   "started": true
+   "started": true,
+   "qualiPos": 5,
+   "grid": 5,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 31.319,
+   "pitTotal": 31.319
   },
   {
    "round": 14,
@@ -4288,7 +6332,14 @@
    "sprintPos": null,
    "cumulative": 211,
    "standing": 2,
-   "started": true
+   "started": true,
+   "qualiPos": 6,
+   "grid": 6,
+   "retired": null,
+   "fastestLap": true,
+   "pitStops": 2,
+   "pitBest": 30.622,
+   "pitTotal": 61.362
   },
   {
    "round": 14,
@@ -4301,7 +6352,14 @@
    "sprintPos": null,
    "cumulative": 59,
    "standing": 9,
-   "started": true
+   "started": true,
+   "qualiPos": 8,
+   "grid": 8,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 30.972,
+   "pitTotal": 30.972
   },
   {
    "round": 14,
@@ -4314,7 +6372,14 @@
    "sprintPos": null,
    "cumulative": 27,
    "standing": 12,
-   "started": true
+   "started": true,
+   "qualiPos": 9,
+   "grid": 9,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 31.671,
+   "pitTotal": 31.671
   },
   {
    "round": 14,
@@ -4327,7 +6392,14 @@
    "sprintPos": null,
    "cumulative": 120,
    "standing": 7,
-   "started": true
+   "started": true,
+   "qualiPos": 7,
+   "grid": 7,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 31.408,
+   "pitTotal": 31.408
   },
   {
    "round": 14,
@@ -4340,7 +6412,14 @@
    "sprintPos": null,
    "cumulative": 31,
    "standing": 11,
-   "started": true
+   "started": true,
+   "qualiPos": 10,
+   "grid": 10,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 31.848,
+   "pitTotal": 31.848
   },
   {
    "round": 14,
@@ -4353,7 +6432,14 @@
    "sprintPos": null,
    "cumulative": 7,
    "standing": 15,
-   "started": true
+   "started": true,
+   "qualiPos": 11,
+   "grid": 11,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 31.04,
+   "pitTotal": 31.04
   },
   {
    "round": 14,
@@ -4366,7 +6452,14 @@
    "sprintPos": null,
    "cumulative": 3,
    "standing": 18,
-   "started": true
+   "started": true,
+   "qualiPos": 13,
+   "grid": 13,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 32.173,
+   "pitTotal": 32.173
   },
   {
    "round": 14,
@@ -4379,7 +6472,14 @@
    "sprintPos": null,
    "cumulative": 41,
    "standing": 10,
-   "started": true
+   "started": true,
+   "qualiPos": 14,
+   "grid": 14,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 31.483,
+   "pitTotal": 31.483
   },
   {
    "round": 14,
@@ -4392,7 +6492,14 @@
    "sprintPos": null,
    "cumulative": 10,
    "standing": 14,
-   "started": true
+   "started": true,
+   "qualiPos": 12,
+   "grid": 12,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 30.836,
+   "pitTotal": 30.836
   },
   {
    "round": 14,
@@ -4405,7 +6512,14 @@
    "sprintPos": null,
    "cumulative": 1,
    "standing": 20,
-   "started": true
+   "started": true,
+   "qualiPos": 15,
+   "grid": 15,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 31.414,
+   "pitTotal": 31.414
   },
   {
    "round": 14,
@@ -4418,7 +6532,14 @@
    "sprintPos": null,
    "cumulative": 5,
    "standing": 17,
-   "started": true
+   "started": true,
+   "qualiPos": 16,
+   "grid": 16,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 31.158,
+   "pitTotal": 31.158
   },
   {
    "round": 14,
@@ -4431,7 +6552,14 @@
    "sprintPos": null,
    "cumulative": 18,
    "standing": 13,
-   "started": true
+   "started": true,
+   "qualiPos": null,
+   "grid": 22,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 31.441,
+   "pitTotal": 64.753
   },
   {
    "round": 14,
@@ -4444,7 +6572,14 @@
    "sprintPos": null,
    "cumulative": 3,
    "standing": 19,
-   "started": true
+   "started": true,
+   "qualiPos": 18,
+   "grid": 17,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 32.002,
+   "pitTotal": 75.847
   },
   {
    "round": 14,
@@ -4457,7 +6592,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 22,
-   "started": true
+   "started": true,
+   "qualiPos": 20,
+   "grid": 19,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 31.667,
+   "pitTotal": 63.377
   },
   {
    "round": 14,
@@ -4470,7 +6612,14 @@
    "sprintPos": null,
    "cumulative": 6,
    "standing": 16,
-   "started": true
+   "started": true,
+   "qualiPos": 17,
+   "grid": 20,
+   "retired": "Collision damage",
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 31.428,
+   "pitTotal": 77.795
   },
   {
    "round": 14,
@@ -4483,7 +6632,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 23,
-   "started": true
+   "started": true,
+   "qualiPos": 19,
+   "grid": 18,
+   "retired": "Water pressure",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 32.217,
+   "pitTotal": 32.217
   },
   {
    "round": 14,
@@ -4496,7 +6652,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 21,
-   "started": true
+   "started": true,
+   "qualiPos": null,
+   "grid": 21,
+   "retired": "Brakes",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 14,
@@ -4509,7 +6672,14 @@
    "sprintPos": null,
    "cumulative": 191,
    "standing": 3,
-   "started": true
+   "started": true,
+   "qualiPos": 4,
+   "grid": 4,
+   "retired": "Brakes",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 14,
@@ -4522,7 +6692,14 @@
    "sprintPos": null,
    "cumulative": 71,
    "standing": 8,
-   "started": false
+   "started": false,
+   "qualiPos": null,
+   "grid": null,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 15,
@@ -4535,7 +6712,14 @@
    "sprintPos": null,
    "cumulative": 236,
    "standing": 2,
-   "started": true
+   "started": true,
+   "qualiPos": 1,
+   "grid": 1,
+   "retired": null,
+   "fastestLap": true,
+   "pitStops": 1,
+   "pitBest": 20.682,
+   "pitTotal": 20.682
   },
   {
    "round": 15,
@@ -4548,7 +6732,14 @@
    "sprintPos": null,
    "cumulative": 163,
    "standing": 6,
-   "started": true
+   "started": true,
+   "qualiPos": 8,
+   "grid": 8,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 20.802,
+   "pitTotal": 20.802
   },
   {
    "round": 15,
@@ -4561,7 +6752,14 @@
    "sprintPos": null,
    "cumulative": 86,
    "standing": 8,
-   "started": true
+   "started": true,
+   "qualiPos": 4,
+   "grid": 4,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 21.935,
+   "pitTotal": 21.935
   },
   {
    "round": 15,
@@ -4574,7 +6772,14 @@
    "sprintPos": null,
    "cumulative": 179,
    "standing": 5,
-   "started": true
+   "started": true,
+   "qualiPos": 2,
+   "grid": 2,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 22.037,
+   "pitTotal": 22.037
   },
   {
    "round": 15,
@@ -4587,7 +6792,14 @@
    "sprintPos": null,
    "cumulative": 302,
    "standing": 1,
-   "started": true
+   "started": true,
+   "qualiPos": 16,
+   "grid": 16,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 20.771,
+   "pitTotal": 20.771
   },
   {
    "round": 15,
@@ -4600,7 +6812,14 @@
    "sprintPos": null,
    "cumulative": 199,
    "standing": 3,
-   "started": true
+   "started": true,
+   "qualiPos": 6,
+   "grid": 6,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 15,
@@ -4613,7 +6832,14 @@
    "sprintPos": null,
    "cumulative": 37,
    "standing": 11,
-   "started": true
+   "started": true,
+   "qualiPos": 15,
+   "grid": 15,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 22.175,
+   "pitTotal": 22.175
   },
   {
    "round": 15,
@@ -4626,7 +6852,14 @@
    "sprintPos": null,
    "cumulative": 7,
    "standing": 16,
-   "started": true
+   "started": true,
+   "qualiPos": 14,
+   "grid": 13,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 21.419,
+   "pitTotal": 21.419
   },
   {
    "round": 15,
@@ -4639,7 +6872,14 @@
    "sprintPos": null,
    "cumulative": 20,
    "standing": 13,
-   "started": true
+   "started": true,
+   "qualiPos": 11,
+   "grid": 10,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 21.282,
+   "pitTotal": 21.282
   },
   {
    "round": 15,
@@ -4652,7 +6892,14 @@
    "sprintPos": null,
    "cumulative": 7,
    "standing": 17,
-   "started": true
+   "started": true,
+   "qualiPos": 9,
+   "grid": 14,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 20.662,
+   "pitTotal": 42.09
   },
   {
    "round": 15,
@@ -4665,7 +6912,14 @@
    "sprintPos": null,
    "cumulative": 7,
    "standing": 15,
-   "started": true
+   "started": true,
+   "qualiPos": 18,
+   "grid": 18,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 20.105,
+   "pitTotal": 20.105
   },
   {
    "round": 15,
@@ -4678,7 +6932,14 @@
    "sprintPos": null,
    "cumulative": 59,
    "standing": 9,
-   "started": true
+   "started": true,
+   "qualiPos": 12,
+   "grid": 11,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 21.718,
+   "pitTotal": 45.416
   },
   {
    "round": 15,
@@ -4691,7 +6952,14 @@
    "sprintPos": null,
    "cumulative": 120,
    "standing": 7,
-   "started": true
+   "started": true,
+   "qualiPos": 3,
+   "grid": 3,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 20.544,
+   "pitTotal": 20.544
   },
   {
    "round": 15,
@@ -4704,7 +6972,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 23,
-   "started": true
+   "started": true,
+   "qualiPos": 20,
+   "grid": 20,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 22.265,
+   "pitTotal": 22.265
   },
   {
    "round": 15,
@@ -4717,7 +6992,14 @@
    "sprintPos": null,
    "cumulative": 10,
    "standing": 14,
-   "started": true
+   "started": true,
+   "qualiPos": 17,
+   "grid": 17,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 20.385,
+   "pitTotal": 20.385
   },
   {
    "round": 15,
@@ -4730,7 +7012,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 22,
-   "started": true
+   "started": true,
+   "qualiPos": 22,
+   "grid": 19,
+   "retired": "Accident",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.024,
+   "pitTotal": 23.024
   },
   {
    "round": 15,
@@ -4743,7 +7032,14 @@
    "sprintPos": null,
    "cumulative": 27,
    "standing": 12,
-   "started": true
+   "started": true,
+   "qualiPos": 10,
+   "grid": 9,
+   "retired": "Collision damage",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 20.725,
+   "pitTotal": 20.725
   },
   {
    "round": 15,
@@ -4756,7 +7052,14 @@
    "sprintPos": null,
    "cumulative": 41,
    "standing": 10,
-   "started": true
+   "started": true,
+   "qualiPos": 7,
+   "grid": 7,
+   "retired": "Collision",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 20.737,
+   "pitTotal": 20.737
   },
   {
    "round": 15,
@@ -4769,7 +7072,14 @@
    "sprintPos": null,
    "cumulative": 186,
    "standing": 4,
-   "started": true
+   "started": true,
+   "qualiPos": 5,
+   "grid": 5,
+   "retired": "Collision",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 20.801,
+   "pitTotal": 20.801
   },
   {
    "round": 15,
@@ -4782,7 +7092,14 @@
    "sprintPos": null,
    "cumulative": 5,
    "standing": 18,
-   "started": true
+   "started": true,
+   "qualiPos": 13,
+   "grid": 12,
+   "retired": "Accident",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 15,
@@ -4795,7 +7112,14 @@
    "sprintPos": null,
    "cumulative": 3,
    "standing": 19,
-   "started": true
+   "started": true,
+   "qualiPos": 19,
+   "grid": 21,
+   "retired": "Water pressure",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 15,
@@ -4808,7 +7132,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 21,
-   "started": true
+   "started": true,
+   "qualiPos": 21,
+   "grid": 22,
+   "retired": "Water pressure",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 15,
@@ -4821,7 +7152,14 @@
    "sprintPos": null,
    "cumulative": 1,
    "standing": 20,
-   "started": false
+   "started": false,
+   "qualiPos": null,
+   "grid": null,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 16,
@@ -4834,7 +7172,14 @@
    "sprintPos": null,
    "cumulative": 188,
    "standing": 6,
-   "started": true
+   "started": true,
+   "qualiPos": 1,
+   "grid": 1,
+   "retired": null,
+   "fastestLap": true,
+   "pitStops": 3,
+   "pitBest": 27.641,
+   "pitTotal": 83.117
   },
   {
    "round": 16,
@@ -4847,7 +7192,14 @@
    "sprintPos": null,
    "cumulative": 320,
    "standing": 1,
-   "started": true
+   "started": true,
+   "qualiPos": 4,
+   "grid": 3,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 27.295,
+   "pitTotal": 82.716
   },
   {
    "round": 16,
@@ -4860,7 +7212,14 @@
    "sprintPos": null,
    "cumulative": 214,
    "standing": 3,
-   "started": true
+   "started": true,
+   "qualiPos": 2,
+   "grid": 2,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 27.802,
+   "pitTotal": 55.855
   },
   {
    "round": 16,
@@ -4873,7 +7232,14 @@
    "sprintPos": null,
    "cumulative": 191,
    "standing": 4,
-   "started": true
+   "started": true,
+   "qualiPos": 5,
+   "grid": 4,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 4,
+   "pitBest": 27.957,
+   "pitTotal": 122.796
   },
   {
    "round": 16,
@@ -4886,7 +7252,14 @@
    "sprintPos": null,
    "cumulative": 96,
    "standing": 8,
-   "started": true
+   "started": true,
+   "qualiPos": 3,
+   "grid": 8,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 27.345,
+   "pitTotal": 84.001
   },
   {
    "round": 16,
@@ -4899,7 +7272,14 @@
    "sprintPos": null,
    "cumulative": 128,
    "standing": 7,
-   "started": true
+   "started": true,
+   "qualiPos": 7,
+   "grid": 6,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 4,
+   "pitBest": 27.498,
+   "pitTotal": 166.513
   },
   {
    "round": 16,
@@ -4912,7 +7292,14 @@
    "sprintPos": null,
    "cumulative": 65,
    "standing": 9,
-   "started": true
+   "started": true,
+   "qualiPos": 11,
+   "grid": 11,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 28.026,
+   "pitTotal": 86.25
   },
   {
    "round": 16,
@@ -4925,7 +7312,14 @@
    "sprintPos": null,
    "cumulative": 7,
    "standing": 17,
-   "started": true
+   "started": true,
+   "qualiPos": 12,
+   "grid": 12,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 27.615,
+   "pitTotal": 83.738
   },
   {
    "round": 16,
@@ -4938,7 +7332,14 @@
    "sprintPos": null,
    "cumulative": 188,
    "standing": 5,
-   "started": true
+   "started": true,
+   "qualiPos": 6,
+   "grid": 5,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 27.869,
+   "pitTotal": 86.909
   },
   {
    "round": 16,
@@ -4951,7 +7352,14 @@
    "sprintPos": null,
    "cumulative": 38,
    "standing": 11,
-   "started": true
+   "started": true,
+   "qualiPos": 16,
+   "grid": 22,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 28.072,
+   "pitTotal": 85.924
   },
   {
    "round": 16,
@@ -4964,7 +7372,14 @@
    "sprintPos": null,
    "cumulative": 7,
    "standing": 15,
-   "started": true
+   "started": true,
+   "qualiPos": 17,
+   "grid": 15,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 4,
+   "pitBest": 27.594,
+   "pitTotal": 145.467
   },
   {
    "round": 16,
@@ -4977,7 +7392,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 21,
-   "started": true
+   "started": true,
+   "qualiPos": 14,
+   "grid": 14,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 4,
+   "pitBest": 27.446,
+   "pitTotal": 144.264
   },
   {
    "round": 16,
@@ -4990,7 +7412,14 @@
    "sprintPos": null,
    "cumulative": 27,
    "standing": 12,
-   "started": true
+   "started": true,
+   "qualiPos": 15,
+   "grid": 21,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 27.631,
+   "pitTotal": 83.797
   },
   {
    "round": 16,
@@ -5003,7 +7432,14 @@
    "sprintPos": null,
    "cumulative": 20,
    "standing": 13,
-   "started": true
+   "started": true,
+   "qualiPos": 18,
+   "grid": 16,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 28.017,
+   "pitTotal": 85.615
   },
   {
    "round": 16,
@@ -5016,7 +7452,14 @@
    "sprintPos": null,
    "cumulative": 7,
    "standing": 16,
-   "started": true
+   "started": true,
+   "qualiPos": 19,
+   "grid": 17,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 28.419,
+   "pitTotal": 86.167
   },
   {
    "round": 16,
@@ -5029,7 +7472,14 @@
    "sprintPos": null,
    "cumulative": 41,
    "standing": 10,
-   "started": true
+   "started": true,
+   "qualiPos": 9,
+   "grid": 9,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 4,
+   "pitBest": 27.758,
+   "pitTotal": 112.099
   },
   {
    "round": 16,
@@ -5042,7 +7492,14 @@
    "sprintPos": null,
    "cumulative": 7,
    "standing": 18,
-   "started": true
+   "started": true,
+   "qualiPos": 13,
+   "grid": 13,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 28.233,
+   "pitTotal": 99.983
   },
   {
    "round": 16,
@@ -5055,7 +7512,14 @@
    "sprintPos": null,
    "cumulative": 10,
    "standing": 14,
-   "started": true
+   "started": true,
+   "qualiPos": 10,
+   "grid": 10,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 5,
+   "pitBest": 27.704,
+   "pitTotal": 218.035
   },
   {
    "round": 16,
@@ -5068,7 +7532,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 23,
-   "started": true
+   "started": true,
+   "qualiPos": 22,
+   "grid": 20,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 6,
+   "pitBest": 28.887,
+   "pitTotal": 186.33
   },
   {
    "round": 16,
@@ -5081,7 +7552,14 @@
    "sprintPos": null,
    "cumulative": 236,
    "standing": 2,
-   "started": true
+   "started": true,
+   "qualiPos": 8,
+   "grid": 7,
+   "retired": "Power loss",
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 27.677,
+   "pitTotal": 84.18
   },
   {
    "round": 16,
@@ -5094,7 +7572,14 @@
    "sprintPos": null,
    "cumulative": 5,
    "standing": 19,
-   "started": true
+   "started": true,
+   "qualiPos": 20,
+   "grid": 18,
+   "retired": "Gearbox",
+   "fastestLap": false,
+   "pitStops": 3,
+   "pitBest": 27.608,
+   "pitTotal": 87.934
   },
   {
    "round": 16,
@@ -5107,7 +7592,14 @@
    "sprintPos": null,
    "cumulative": 0,
    "standing": 22,
-   "started": true
+   "started": true,
+   "qualiPos": 21,
+   "grid": 19,
+   "retired": "Spun off",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 16,
@@ -5120,7 +7612,14 @@
    "sprintPos": null,
    "cumulative": 1,
    "standing": 20,
-   "started": false
+   "started": false,
+   "qualiPos": null,
+   "grid": null,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 17,
@@ -5133,7 +7632,14 @@
    "sprintPos": 1,
    "cumulative": 221,
    "standing": 4,
-   "started": true
+   "started": true,
+   "qualiPos": 1,
+   "grid": 1,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.698,
+   "pitTotal": 23.698
   },
   {
    "round": 17,
@@ -5146,7 +7652,14 @@
    "sprintPos": 3,
    "cumulative": 215,
    "standing": 5,
-   "started": true
+   "started": true,
+   "qualiPos": 2,
+   "grid": 2,
+   "retired": null,
+   "fastestLap": true,
+   "pitStops": 2,
+   "pitBest": 24.109,
+   "pitTotal": 48.75
   },
   {
    "round": 17,
@@ -5159,7 +7672,14 @@
    "sprintPos": 4,
    "cumulative": 340,
    "standing": 1,
-   "started": true
+   "started": true,
+   "qualiPos": 4,
+   "grid": 4,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 23.591,
+   "pitTotal": 47.706
   },
   {
    "round": 17,
@@ -5172,7 +7692,14 @@
    "sprintPos": 8,
    "cumulative": 201,
    "standing": 6,
-   "started": true
+   "started": true,
+   "qualiPos": 5,
+   "grid": 5,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.922,
+   "pitTotal": 23.922
   },
   {
    "round": 17,
@@ -5185,7 +7712,14 @@
    "sprintPos": 14,
    "cumulative": 138,
    "standing": 7,
-   "started": true
+   "started": true,
+   "qualiPos": 7,
+   "grid": 6,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 24.076,
+   "pitTotal": 49.789
   },
   {
    "round": 17,
@@ -5198,7 +7732,14 @@
    "sprintPos": 2,
    "cumulative": 229,
    "standing": 3,
-   "started": true
+   "started": true,
+   "qualiPos": 3,
+   "grid": 3,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.048,
+   "pitTotal": 24.048
   },
   {
    "round": 17,
@@ -5211,7 +7752,14 @@
    "sprintPos": 5,
    "cumulative": 75,
    "standing": 9,
-   "started": true
+   "started": true,
+   "qualiPos": 9,
+   "grid": 8,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.663,
+   "pitTotal": 24.663
   },
   {
    "round": 17,
@@ -5224,7 +7772,14 @@
    "sprintPos": 7,
    "cumulative": 13,
    "standing": 14,
-   "started": true
+   "started": true,
+   "qualiPos": 11,
+   "grid": 10,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.375,
+   "pitTotal": 24.375
   },
   {
    "round": 17,
@@ -5237,7 +7792,14 @@
    "sprintPos": "DNF",
    "cumulative": 238,
    "standing": 2,
-   "started": true
+   "started": true,
+   "qualiPos": 6,
+   "grid": 19,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.648,
+   "pitTotal": 23.648
   },
   {
    "round": 17,
@@ -5250,7 +7812,14 @@
    "sprintPos": "DNF",
    "cumulative": 97,
    "standing": 8,
-   "started": true
+   "started": true,
+   "qualiPos": "NC",
+   "grid": 22,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.549,
+   "pitTotal": 24.549
   },
   {
    "round": 17,
@@ -5263,7 +7832,14 @@
    "sprintPos": 9,
    "cumulative": 41,
    "standing": 10,
-   "started": true
+   "started": true,
+   "qualiPos": 8,
+   "grid": 7,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.581,
+   "pitTotal": 24.581
   },
   {
    "round": 17,
@@ -5276,7 +7852,14 @@
    "sprintPos": 6,
    "cumulative": 23,
    "standing": 13,
-   "started": true
+   "started": true,
+   "qualiPos": 12,
+   "grid": 11,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.871,
+   "pitTotal": 24.871
   },
   {
    "round": 17,
@@ -5289,7 +7872,14 @@
    "sprintPos": 10,
    "cumulative": 7,
    "standing": 16,
-   "started": true
+   "started": true,
+   "qualiPos": 13,
+   "grid": 12,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.931,
+   "pitTotal": 24.931
   },
   {
    "round": 17,
@@ -5302,7 +7892,14 @@
    "sprintPos": 12,
    "cumulative": 7,
    "standing": 18,
-   "started": true
+   "started": true,
+   "qualiPos": 14,
+   "grid": 13,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.202,
+   "pitTotal": 24.202
   },
   {
    "round": 17,
@@ -5315,7 +7912,14 @@
    "sprintPos": 13,
    "cumulative": 38,
    "standing": 11,
-   "started": true
+   "started": true,
+   "qualiPos": 10,
+   "grid": 9,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.372,
+   "pitTotal": 24.372
   },
   {
    "round": 17,
@@ -5328,7 +7932,14 @@
    "sprintPos": 11,
    "cumulative": 7,
    "standing": 17,
-   "started": true
+   "started": true,
+   "qualiPos": 17,
+   "grid": 22,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 24.33,
+   "pitTotal": 24.33
   },
   {
    "round": 17,
@@ -5341,7 +7952,14 @@
    "sprintPos": "DNF",
    "cumulative": 0,
    "standing": 23,
-   "started": true
+   "started": true,
+   "qualiPos": 20,
+   "grid": 17,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 24.85,
+   "pitTotal": 50.137
   },
   {
    "round": 17,
@@ -5354,7 +7972,14 @@
    "sprintPos": "DNF",
    "cumulative": 5,
    "standing": 19,
-   "started": true
+   "started": true,
+   "qualiPos": 18,
+   "grid": 16,
+   "retired": "Overheating",
+   "fastestLap": false,
+   "pitStops": 2,
+   "pitBest": 24.093,
+   "pitTotal": 49.965
   },
   {
    "round": 17,
@@ -5367,7 +7992,14 @@
    "sprintPos": "DNF",
    "cumulative": 0,
    "standing": 22,
-   "started": true
+   "started": true,
+   "qualiPos": 21,
+   "grid": 18,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 29.266,
+   "pitTotal": 29.266
   },
   {
    "round": 17,
@@ -5380,7 +8012,14 @@
    "sprintPos": "DNF",
    "cumulative": 0,
    "standing": 21,
-   "started": true
+   "started": true,
+   "qualiPos": 19,
+   "grid": 22,
+   "retired": "Clutch",
+   "fastestLap": false,
+   "pitStops": 1,
+   "pitBest": 23.601,
+   "pitTotal": 23.601
   },
   {
    "round": 17,
@@ -5393,7 +8032,14 @@
    "sprintPos": "DNF",
    "cumulative": 27,
    "standing": 12,
-   "started": true
+   "started": true,
+   "qualiPos": 16,
+   "grid": 15,
+   "retired": "Transmission",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 17,
@@ -5406,7 +8052,14 @@
    "sprintPos": "DNF",
    "cumulative": 10,
    "standing": 15,
-   "started": true
+   "started": true,
+   "qualiPos": 15,
+   "grid": 14,
+   "retired": "Gearbox",
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   },
   {
    "round": 17,
@@ -5419,7 +8072,14 @@
    "sprintPos": null,
    "cumulative": 1,
    "standing": 20,
-   "started": false
+   "started": false,
+   "qualiPos": null,
+   "grid": null,
+   "retired": null,
+   "fastestLap": false,
+   "pitStops": 0,
+   "pitBest": null,
+   "pitTotal": null
   }
  ],
  "constructorRounds": [
@@ -7108,6 +9768,6 @@
   }
  ],
  "warnings": [],
- "contentHash": "07105cc6813f",
- "generatedAt": "2026-10-23T07:31:33+00:00"
+ "contentHash": "506f620eb212",
+ "generatedAt": "2026-10-23T17:40:57+00:00"
 }
