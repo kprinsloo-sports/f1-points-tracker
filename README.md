@@ -24,3 +24,5 @@ and shown as a public web page.
   winter break. GitHub emails a warning first; if it gets paused, open **Actions → Update F1 tracker →
   Enable workflow** before the first race.
 - You can still run `python update.py` on your own PC; it only needs standard Python.
+
+Full documentation: [docs/wiki/Home.md](docs/wiki/Home.md).
