@@ -84,7 +84,8 @@ def sync_http(season):
                 f.write(data)
         return data
 
-    names = ["race.yml", "race-results.yml", "sprint-race-results.yml", "driver-standings.yml", "constructor-standings.yml"]
+    names = ["race.yml", "race-results.yml", "sprint-race-results.yml", "driver-standings.yml", "constructor-standings.yml",
+             "qualifying-results.yml", "fastest-laps.yml", "pit-stops.yml"]
     with ThreadPoolExecutor(8) as pool:
         got = dict(zip(
             [(f, n) for f in folders for n in names],
@@ -172,6 +173,14 @@ def load(path, default=None):
     return data or default
 
 
+def seconds(t):
+    """'23.062' or '1:01.177' -> seconds as a float."""
+    if t is None:
+        return None
+    m, _, s = str(t).rpartition(":")
+    return round((int(m) * 60 if m else 0) + float(s), 3)
+
+
 def build(season, root, commit):
     base = os.path.join(root, "src", "data")
     sdir = os.path.join(base, "seasons", str(season))
@@ -206,13 +215,26 @@ def build(season, root, commit):
         for kind, rows in (("race", results), ("sprint", sprint or [])):
             for r in rows:
                 d = wk.setdefault(r["driverId"], {"constructorId": r["constructorId"], "race": 0, "sprint": 0,
-                                                  "racePos": None, "sprintPos": None})
+                                                  "racePos": None, "sprintPos": None, "grid": None, "retired": None})
                 d[kind] += r.get("points") or 0
                 d[f"{kind}Pos"] = r.get("position") or r.get("positionText")
                 if kind == "race":
                     d["constructorId"] = r["constructorId"]
+                    # "PL" = started from the pit lane, i.e. behind everyone on the grid.
+                    g = r.get("gridPosition")
+                    d["grid"] = len(results) if g == "PL" else g
+                    d["retired"] = r.get("reasonRetired")
                 drivers.setdefault(r["driverId"], None)
                 constructors.setdefault(r["constructorId"], None)
+
+        # Qualifying, fastest lap and pit stops. Pit stop times are F1DB's pit lane time (entry to exit).
+        quali = {q["driverId"]: q.get("position") for q in load(os.path.join(f, "qualifying-results.yml"), [])}
+        laps = load(os.path.join(f, "fastest-laps.yml"), [])
+        fastest = next((l["driverId"] for l in laps if l.get("position") == 1), None)
+        pits = {}
+        for p in load(os.path.join(f, "pit-stops.yml"), []):
+            if seconds(p.get("time")) is not None:
+                pits.setdefault(p["driverId"], []).append(seconds(p["time"]))
 
         dstand = {s["driverId"]: s for s in load(os.path.join(f, "driver-standings.yml"), [])}
         cstand = {s["constructorId"]: s for s in load(os.path.join(f, "constructor-standings.yml"), [])}
@@ -240,6 +262,10 @@ def build(season, root, commit):
                 "points": (d["race"] + d["sprint"]) if d else 0,
                 "racePos": d["racePos"] if d else None, "sprintPos": d["sprintPos"] if d else None,
                 "cumulative": dcum[did], "standing": st.get("position"), "started": d is not None,
+                "qualiPos": quali.get(did), "grid": d["grid"] if d else None,
+                "retired": d["retired"] if d else None, "fastestLap": did == fastest,
+                "pitStops": len(pits.get(did, [])), "pitBest": min(pits[did]) if pits.get(did) else None,
+                "pitTotal": round(sum(pits[did]), 3) if pits.get(did) else None,
             })
         for cid in sorted(set(ccum) | set(cwk)):
             c = cwk.get(cid, {"race": 0, "sprint": 0})
@@ -312,7 +338,11 @@ def dashboard_rows(data):
                 row.update({"driverId": eid, "driver": d["name"], "abbr": d["abbr"],
                             "teamId": tid, "team": con[tid]["name"], "color": con[tid]["color"],
                             "racePos": r["racePos"], "raced": r["started"],
-                            "sprintPos": r["sprintPos"], "wins": wins[eid], "podiums": pods[eid]})
+                            "sprintPos": r["sprintPos"], "wins": wins[eid], "podiums": pods[eid],
+                            "qualiPos": r["qualiPos"], "grid": r["grid"],
+                            "gained": r["grid"] - p if p is not None and isinstance(r["grid"], int) else None,
+                            "retired": r["retired"], "fastestLap": r["fastestLap"],
+                            "pitStops": r["pitStops"], "pitBest": r["pitBest"], "pitTotal": r["pitTotal"]})
             else:
                 row.update({"teamId": eid, "team": con[eid]["name"], "color": con[eid]["color"]})
             row.update({"racePoints": r["racePoints"], "sprintPoints": r["sprintPoints"], "points": r["points"],

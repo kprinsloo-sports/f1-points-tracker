@@ -45,6 +45,23 @@
   footer { color: var(--muted); font-size: 12px; }
   footer a { color: inherit; }
   .error { padding: 40px; text-align: center; color: var(--muted); }
+  .card .hint { color: var(--muted); font-size: 13px; margin: -6px 0 12px; }
+  .chart.short { height: 360px; }
+  #grid td, #grid th { padding: 6px 6px; text-align: center; }
+  #grid td:first-child, #grid th:first-child { text-align: left; position: sticky; left: 0; background: var(--card); }
+  #grid td.res { min-width: 34px; border-radius: 4px; font-size: 13px; }
+  #grid td.p1 { background: #f2c94c; color: #16161a; font-weight: 650; }
+  #grid td.p2 { background: #c9ccd3; color: #16161a; font-weight: 650; }
+  #grid td.p3 { background: #d79a63; color: #16161a; font-weight: 650; }
+  #grid td.pts { background: rgba(26,154,80,.18); font-weight: 500; }
+  #grid td.out { color: var(--accent); font-size: 11px; }
+  #grid td.dns { color: var(--muted); font-size: 11px; }
+  #grid sup { font-size: 9px; margin-left: 1px; }
+  .legend { color: var(--muted); font-size: 12px; margin-top: 10px; }
+  .legend span { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin: 0 4px 0 10px; vertical-align: -1px; }
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+  .two .card { margin-bottom: 0; }
+  .two { margin-bottom: 20px; }
 </style>
 </head>
 <body>
@@ -72,6 +89,36 @@
   <div class="card">
     <h2 id="tableTitle">Standings</h2>
     <div class="tablewrap"><table id="table"></table></div>
+  </div>
+
+  <div class="card">
+    <h2 id="statsTitle">Season stats</h2>
+    <p class="hint">Poles are P1 in qualifying. Places gained compares the starting grid with the finish (classified finishes only). Pit times are time in the pit lane, entry to exit.</p>
+    <div class="tablewrap"><table id="stats"></table></div>
+  </div>
+
+  <div class="card">
+    <h2 id="splitTitle">Grand Prix points vs sprint points</h2>
+    <div class="chart short"><canvas id="split"></canvas></div>
+  </div>
+
+  <div class="card">
+    <h2>Finishing position in every Grand Prix</h2>
+    <p class="hint">Hover a cell for qualifying, grid and retirement details.</p>
+    <div class="tablewrap"><table id="grid"></table></div>
+    <div class="legend"><span style="background:#f2c94c"></span>Win<span style="background:#c9ccd3"></span>2nd<span style="background:#d79a63"></span>3rd<span style="background:rgba(26,154,80,.35)"></span>Points
+      &nbsp;· <sup>P</sup> pole &nbsp;· <sup>F</sup> fastest lap &nbsp;· <b style="color:var(--accent)">DNF</b> retired</div>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <h2>Retirements by cause</h2>
+      <div class="chart short"><canvas id="reasons"></canvas></div>
+    </div>
+    <div class="card">
+      <h2>Fastest laps and fastest pit stops, race by race</h2>
+      <div class="tablewrap"><table id="laps"></table></div>
+    </div>
   </div>
 
   <footer id="footer"></footer>
@@ -104,7 +151,8 @@ async function load(season) {
   } catch {
     $("sub").textContent = `No data for ${season} yet.`;
     $("kpis").innerHTML = ""; $("table").innerHTML = "";
-    if (state.chart) state.chart.destroy();
+    ["stats", "grid", "laps"].forEach(id => $(id).innerHTML = "");
+    [state.chart, state.split, state.reasons].forEach(c => c && c.destroy());
     return;
   }
   try {
@@ -139,7 +187,132 @@ function render() {
   ].join("");
 
   drawTable(done);
-  if (window.Chart) drawChart(done);
+  drawStats();
+  drawGrid(done);
+  drawLaps(done);
+  if (window.Chart) { drawChart(done); drawSplit(); drawReasons(); }
+}
+
+// A retirement: any race the driver started but did not finish, classified or not.
+const isOut = r => r.raced && r.racePos !== "DNS" && !!r.retired;
+const num = v => typeof v === "number" ? v : null;
+const avg = xs => xs.length ? (xs.reduce((a, b) => a + b, 0) / xs.length) : null;
+const fmt = (v, dp = 1) => v == null ? "–" : v.toFixed(dp);
+
+function aggregate(rows) {
+  const fin = rows.map(r => num(r.racePos)).filter(v => v != null);
+  const q = rows.map(r => num(r.qualiPos)).filter(v => v != null);
+  const pit = rows.filter(r => r.pitBest != null);
+  const gained = rows.map(r => r.gained).filter(v => v != null);
+  return {
+    poles: rows.filter(r => r.qualiPos === 1).length, avgQuali: avg(q),
+    wins: rows.filter(r => r.racePos === 1).length, podiums: rows.filter(r => num(r.racePos) && r.racePos <= 3).length,
+    avgFinish: avg(fin), best: fin.length ? Math.min(...fin) : null,
+    gained: gained.length ? gained.reduce((a, b) => a + b, 0) : null,
+    fastest: rows.filter(r => r.fastestLap).length, dnf: rows.filter(isOut).length,
+    stops: rows.reduce((a, r) => a + (r.pitStops || 0), 0),
+    pitBest: pit.length ? Math.min(...pit.map(r => r.pitBest)) : null,
+    pitAvg: (() => { const n = rows.reduce((a, r) => a + (r.pitStops || 0), 0);
+                     return n ? rows.reduce((a, r) => a + (r.pitTotal || 0), 0) / n : null; })(),
+    gp: rows.reduce((a, r) => a + r.racePoints, 0), sprint: rows.reduce((a, r) => a + r.sprintPoints, 0),
+  };
+}
+
+function drawStats() {
+  const isD = state.view === "drivers";
+  const order = latest(isD ? state.drivers : state.constructors);
+  const key = isD ? "driverId" : "teamId";
+  const signed = v => v == null ? "–" : v > 0 ? `<span class="up">+${v}</span>` : v < 0 ? `<span class="down">${v}</span>` : "0";
+  const head = `<tr><th>Pos</th><th>${isD ? "Driver" : "Team"}</th><th></th><th>Poles</th><th>Avg quali</th><th>Wins</th><th>Podiums</th>
+    <th>Avg finish</th><th>Best</th><th>Places gained</th><th>Fastest laps</th><th>DNFs</th><th>Pit stops</th><th>Avg pit (s)</th><th>Best pit (s)</th>
+    <th>GP pts</th><th>Sprint pts</th></tr>`;
+  const body = order.map(o => {
+    const a = aggregate(state.drivers.filter(r => r[key] === o[key] && r.raced));
+    return `<tr><td>${o.standing ?? ""}</td><td><span class="sw" style="background:${o.color}"></span>${isD ? o.driver : o.team}</td>
+      <td>${isD ? o.team : ""}</td><td>${a.poles}</td><td>${fmt(a.avgQuali)}</td><td>${a.wins}</td><td>${a.podiums}</td>
+      <td>${fmt(a.avgFinish)}</td><td>${a.best ?? "–"}</td><td>${signed(a.gained)}</td><td>${a.fastest}</td><td>${a.dnf}</td>
+      <td>${a.stops}</td><td>${fmt(a.pitAvg)}</td><td>${fmt(a.pitBest, 2)}</td><td>${a.gp}</td><td>${a.sprint}</td></tr>`;
+  }).join("");
+  $("stats").innerHTML = `<thead>${head}</thead><tbody>${body}</tbody>`;
+  $("statsTitle").textContent = isD ? "Drivers: qualifying, race results, reliability and pit stops"
+                                    : "Constructors: qualifying, race results, reliability and pit stops (both cars combined)";
+}
+
+function drawSplit() {
+  const isD = state.view === "drivers";
+  const order = latest(isD ? state.drivers : state.constructors);
+  const key = isD ? "driverId" : "teamId";
+  const rows = order.map(o => ({ o, ...aggregate((isD ? state.drivers : state.constructors).filter(r => r[key] === o[key])) }));
+  const labels = rows.map(r => isD ? r.o.abbr : r.o.team);
+  const muted = css("--muted"), grid = css("--grid");
+  if (state.split) state.split.destroy();
+  state.split = new Chart($("split"), {
+    type: "bar",
+    data: { labels, datasets: [
+      { label: "Grand Prix", data: rows.map(r => r.gp), backgroundColor: rows.map(r => r.o.color) },
+      { label: "Sprint", data: rows.map(r => r.sprint), backgroundColor: rows.map(r => r.o.color + "66") },
+    ] },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: { x: { stacked: true, ticks: { color: muted }, grid: { display: false } },
+                y: { stacked: true, beginAtZero: true, ticks: { color: muted }, grid: { color: grid }, title: { display: true, text: "Points", color: muted } } },
+      plugins: { legend: { display: false },
+                 tooltip: { callbacks: { footer: items => `Total ${rows[items[0].dataIndex].gp + rows[items[0].dataIndex].sprint}` } } },
+    },
+  });
+  $("splitTitle").textContent = (isD ? "Drivers" : "Constructors") + ": Grand Prix points (solid) vs sprint points (light)";
+}
+
+function drawGrid(done) {
+  const order = latest(state.drivers);
+  const head = `<tr><th>Driver</th>${done.map(r => `<th title="${r.gpName}">${r.gp}${r.sprintWeekend ? "<sup>S</sup>" : ""}</th>`).join("")}</tr>`;
+  const body = order.map(o => {
+    const mine = state.drivers.filter(r => r.driverId === o.driverId);
+    const cells = done.map(rd => {
+      const r = mine.find(x => x.round === rd.round);
+      if (!r || !r.raced) return `<td class="res dns"></td>`;
+      const p = r.racePos;
+      const cls = p === 1 ? "p1" : p === 2 ? "p2" : p === 3 ? "p3" : r.racePoints > 0 ? "pts" : isOut(r) && typeof p !== "number" ? "out" : p === "DNS" ? "dns" : "";
+      const tip = [`${rd.gpName}`, r.qualiPos ? `Qualified P${r.qualiPos}` : "", r.grid ? `Started P${r.grid}` : "",
+                   typeof p === "number" ? `Finished P${p}` : p, r.retired ? `Retired: ${r.retired}` : "",
+                   r.racePoints ? `${r.racePoints} pts` : ""].filter(Boolean).join(" · ");
+      const marks = (r.qualiPos === 1 ? "P" : "") + (r.fastestLap ? "F" : "");
+      return `<td class="res ${cls}" title="${tip}">${typeof p === "number" ? p : p ?? ""}${marks ? `<sup>${marks}</sup>` : ""}</td>`;
+    }).join("");
+    return `<tr><td><span class="sw" style="background:${o.color}"></span>${o.abbr}</td>${cells}</tr>`;
+  }).join("");
+  $("grid").innerHTML = `<thead>${head}</thead><tbody>${body}</tbody>`;
+}
+
+function drawReasons() {
+  const counts = {};
+  state.drivers.filter(isOut).forEach(r => counts[r.retired] = (counts[r.retired] || 0) + 1);
+  const rows = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+  const muted = css("--muted"), grid = css("--grid");
+  if (state.reasons) state.reasons.destroy();
+  state.reasons = new Chart($("reasons"), {
+    type: "bar",
+    data: { labels: rows.map(r => r[0]), datasets: [{ label: "Retirements", data: rows.map(r => r[1]), backgroundColor: css("--accent") }] },
+    options: {
+      indexAxis: "y", responsive: true, maintainAspectRatio: false,
+      scales: { x: { beginAtZero: true, ticks: { color: muted, precision: 0 }, grid: { color: grid } },
+                y: { ticks: { color: muted, autoSkip: false }, grid: { display: false } } },
+      plugins: { legend: { display: false },
+                 tooltip: { callbacks: { afterBody: items => state.drivers.filter(r => isOut(r) && r.retired === items[0].label)
+                                                                  .map(r => `${r.gp} ${r.abbr} (${r.team})`) } } },
+    },
+  });
+}
+
+function drawLaps(done) {
+  const body = done.slice().reverse().map(rd => {
+    const here = state.drivers.filter(r => r.round === rd.round && r.raced);
+    const fl = here.find(r => r.fastestLap);
+    const pit = here.filter(r => r.pitBest != null).sort((a, b) => a.pitBest - b.pitBest)[0];
+    const name = r => r ? `<span class="sw" style="background:${r.color}"></span>${r.abbr}` : "–";
+    return `<tr><td>${rd.round}</td><td title="${rd.gpName}">${rd.gp}</td><td>${name(fl)}</td><td>${name(pit)}</td><td>${pit ? pit.pitBest.toFixed(2) + "s" : "–"}</td></tr>`;
+  }).join("");
+  $("laps").innerHTML = `<thead><tr><th>Rd</th><th>GP</th><th>Fastest lap</th><th>Fastest stop</th><th>Pit lane</th></tr></thead><tbody>${body}</tbody>`;
 }
 
 function drawChart(done) {
