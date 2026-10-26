@@ -13,6 +13,7 @@ on:
 permissions:
   contents: write
   pages: write
+  issues: write
   id-token: write
 
 concurrency:
@@ -38,6 +39,7 @@ jobs:
         run: python update.py ${{ inputs.season }}
 
       - name: Commit new data
+        id: commit
         run: |
           git add data
           if git diff --cached --quiet; then
@@ -47,6 +49,7 @@ jobs:
             git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
             git commit -m "Update F1 points data"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Build site
@@ -61,3 +64,22 @@ jobs:
           path: _site
       - id: deploy
         uses: actions/deploy-pages@v4
+
+      # Comments on the "Dashboard updates" issue, which @-mentions the repo owner so
+      # they are subscribed and get a GitHub email/app notification for each one.
+      - name: Notify dashboard refresh
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PAGE_URL: ${{ steps.deploy.outputs.page_url }}
+        run: |
+          python .github/notify.py "${{ inputs.season }}" > note.md
+          gh issue comment "$(bash .github/notify-issue.sh)" --body-file note.md
+
+      - name: Notify failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment "$(bash .github/notify-issue.sh)" --body \
+            "**Dashboard refresh failed.** See the run log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
