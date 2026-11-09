@@ -23,6 +23,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
@@ -36,7 +37,7 @@ jobs:
       - name: Rebuild season from F1DB (plus lap-by-lap data from Jolpica)
         env:
           F1DB_CACHE: ${{ runner.temp }}/f1db
-        run: python update.py ${{ inputs.season }}
+        run: python -u update.py ${{ inputs.season }}
 
       - name: Commit new data
         id: commit

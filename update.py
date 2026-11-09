@@ -382,6 +382,8 @@ def write_season_index():
 # tracker itself never depends on Jolpica.
 JOLPICA = "https://api.jolpi.ca/ergast/f1"
 LAPS_BUDGET = int(os.environ.get("LAPS_BUDGET", "300"))
+# Wall-clock cap for the lap downloads, so a slow or rate-limiting Jolpica can't hold up the run.
+LAPS_MINUTES = float(os.environ.get("LAPS_MINUTES", "5"))
 
 
 class Budget(Exception):
@@ -390,10 +392,10 @@ class Budget(Exception):
 
 def jolpica(path, budget):
     """GET one Jolpica page as JSON, backing off on rate limits. Spends one unit of budget."""
-    if budget[0] <= 0:
+    if budget[0] <= 0 or time.monotonic() > budget[1]:
         raise Budget()
     budget[0] -= 1
-    for attempt in range(5):
+    for attempt in range(4):
         try:
             time.sleep(0.3)  # stay under the 4-requests-a-second burst limit
             data = fetch(f"{JOLPICA}/{path}")
@@ -401,10 +403,14 @@ def jolpica(path, budget):
         except urllib.error.HTTPError as e:
             if e.code != 429 and e.code < 500:
                 raise
-            wait = int(e.headers.get("Retry-After") or 0) or 2 ** (attempt + 2)
-            time.sleep(min(wait, 60))
-        except (urllib.error.URLError, TimeoutError):
-            time.sleep(2 ** (attempt + 1))
+            wait = min(int(e.headers.get("Retry-After") or 0) or 2 ** (attempt + 2), 60)
+            print(f"  laps: Jolpica returned {e.code}, waiting {wait}s", flush=True)
+        except (urllib.error.URLError, TimeoutError) as e:
+            wait = 2 ** (attempt + 1)
+            print(f"  laps: {type(e).__name__} from Jolpica, waiting {wait}s", flush=True)
+        if time.monotonic() + wait > budget[1]:
+            raise Budget()
+        time.sleep(wait)
     raise RuntimeError(f"Jolpica kept failing for {path}")
 
 
@@ -490,7 +496,7 @@ def update_laps(season, root, data):
     rdir = os.path.join(root, "src", "data", "seasons", str(season), "races")
     out = os.path.join(HERE, "data", str(season), "laps")
     os.makedirs(out, exist_ok=True)
-    budget, added = [LAPS_BUDGET], []
+    budget, added = [LAPS_BUDGET, time.monotonic() + LAPS_MINUTES * 60], []
     try:
         for name in sorted(os.listdir(rdir)):
             folder = os.path.join(rdir, name)
@@ -507,8 +513,9 @@ def update_laps(season, root, data):
             with open(path, "w", encoding="utf-8") as f:
                 json.dump(laps, f, separators=(",", ":"))
             added.append(race["round"])
+            print(f"  laps: saved round {race['round']} ({LAPS_BUDGET - budget[0]} requests so far)", flush=True)
     except Budget:
-        print(f"  laps: request budget used up, the rest will follow next run")
+        print(f"  laps: time or request limit reached, the rest will follow next run")
     except Exception as e:  # never let lap data break the points update
         print(f"  laps: skipped ({type(e).__name__}: {e})")
     have = sorted(int(n[:-5]) for n in os.listdir(out) if re.fullmatch(r"\d+\.json", n))
