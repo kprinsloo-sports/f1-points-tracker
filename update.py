@@ -9,7 +9,7 @@ Every run rebuilds the whole season from source, so it is idempotent: re-running
 after a steward penalty or a points correction simply produces corrected data.
 Changes versus the previous run are appended to data/<season>/changelog.json.
 """
-import csv, datetime, hashlib, json, os, re, shutil, subprocess, sys
+import csv, datetime, hashlib, json, os, re, shutil, subprocess, sys, time
 import urllib.error, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
@@ -373,10 +373,156 @@ def write_season_index():
         json.dump(seasons, f)
 
 
+# ---------------------------------------------------------------------------------------------
+# Lap by lap: every driver's position and lap time on every lap, from Jolpica (the Ergast API
+# successor). F1DB has no lap-level data. Each finished race is downloaded once and saved to
+# data/<season>/laps/<round>.json; races already saved are skipped, so a normal run makes no
+# requests at all. Jolpica allows about 500 requests an hour, so a run stops after LAPS_BUDGET
+# requests and the next run carries on. Any failure here only prints a warning: the points
+# tracker itself never depends on Jolpica.
+JOLPICA = "https://api.jolpi.ca/ergast/f1"
+LAPS_BUDGET = int(os.environ.get("LAPS_BUDGET", "300"))
+
+
+class Budget(Exception):
+    pass
+
+
+def jolpica(path, budget):
+    """GET one Jolpica page as JSON, backing off on rate limits. Spends one unit of budget."""
+    if budget[0] <= 0:
+        raise Budget()
+    budget[0] -= 1
+    for attempt in range(5):
+        try:
+            time.sleep(0.3)  # stay under the 4-requests-a-second burst limit
+            data = fetch(f"{JOLPICA}/{path}")
+            return json.loads(data)["MRData"] if data else None
+        except urllib.error.HTTPError as e:
+            if e.code != 429 and e.code < 500:
+                raise
+            wait = int(e.headers.get("Retry-After") or 0) or 2 ** (attempt + 2)
+            time.sleep(min(wait, 60))
+        except (urllib.error.URLError, TimeoutError):
+            time.sleep(2 ** (attempt + 1))
+    raise RuntimeError(f"Jolpica kept failing for {path}")
+
+
+def jolpica_all(path, key, budget):
+    """All rows of a paginated Jolpica endpoint (max 100 per page). Returns the Races list."""
+    races, offset, total = [], 0, None
+    while total is None or offset < total:
+        page = jolpica(f"{path}?limit=100&offset={offset}", budget)
+        if not page:
+            return []
+        total = int(page["total"])
+        got = page["RaceTable"]["Races"]
+        if not got:
+            break
+        races.append(got[0])
+        offset += 100
+    # Pages can split one lap's timings in two; merge rows by lap number.
+    if key == "Laps":
+        laps = {}
+        for r in races:
+            for lap in r.get("Laps", []):
+                laps.setdefault(int(lap["number"]), []).extend(lap["Timings"])
+        return laps
+    return [row for r in races for row in r.get(key, [])]
+
+
+def race_laps(season, folder, race, data, budget):
+    """Build one race's lap file, or None if Jolpica doesn't have the full race yet."""
+    rnd = race["round"]
+    f1db_results = load(os.path.join(folder, "race-results.yml"), [])
+    by_number = {r.get("driverNumber"): r for r in f1db_results}
+    drv = {d["id"]: d for d in data["drivers"]}
+    con = {c["id"]: c for c in data["constructors"]}
+    by_abbr = {d["abbr"]: d["id"] for d in data["drivers"]}
+
+    results = jolpica_all(f"{season}/{rnd}/results/", "Results", budget)
+    laps = jolpica_all(f"{season}/{rnd}/laps/", "Laps", budget)
+    winner_laps = max((r.get("laps") or 0 for r in f1db_results), default=0)
+    if not results or not laps or max(laps) < winner_laps:
+        return None  # not published yet, or still partial: try again next run
+
+    # Jolpica and F1DB use different driver ids; match on car number, then on the 3-letter code.
+    ids = {}
+    for r in results:
+        num = int(r["number"]) if str(r.get("number", "")).isdigit() else None
+        f1 = by_number.get(num, {}).get("driverId") or by_abbr.get(r["Driver"].get("code"))
+        if f1:
+            ids[r["Driver"]["driverId"]] = f1
+
+    pits = {}
+    for p in load(os.path.join(folder, "pit-stops.yml"), []):
+        pits.setdefault(p["driverId"], []).append(p.get("lap"))
+
+    n = max(laps)
+    rows = {}
+    for lap, timings in laps.items():
+        for t in timings:
+            did = ids.get(t["driverId"])
+            if not did:
+                continue
+            row = rows.setdefault(did, {"pos": [None] * n, "time": [None] * n})
+            row["pos"][lap - 1] = int(t["position"])
+            row["time"][lap - 1] = seconds(t.get("time"))
+
+    rnd_info = next(r for r in data["rounds"] if r["round"] == rnd)
+    out = []
+    for r in f1db_results:  # finishing order
+        did = r["driverId"]
+        if did not in rows:
+            continue
+        cid = r["constructorId"]
+        g = r.get("gridPosition")
+        out.append({"driverId": did, "abbr": drv[did]["abbr"], "name": drv[did]["name"],
+                    "teamId": cid, "team": con[cid]["name"], "color": con[cid]["color"],
+                    "finish": r.get("position") or r.get("positionText"),
+                    "grid": len(f1db_results) if g == "PL" else g,
+                    "pits": sorted(l for l in pits.get(did, []) if l), **rows[did]})
+    return {"round": rnd, "gp": rnd_info["abbr"], "gpName": rnd_info["short"], "laps": n,
+            "source": {"name": "Jolpica", "url": "https://jolpi.ca"}, "drivers": out}
+
+
+def update_laps(season, root, data):
+    rdir = os.path.join(root, "src", "data", "seasons", str(season), "races")
+    out = os.path.join(HERE, "data", str(season), "laps")
+    os.makedirs(out, exist_ok=True)
+    budget, added = [LAPS_BUDGET], []
+    try:
+        for name in sorted(os.listdir(rdir)):
+            folder = os.path.join(rdir, name)
+            if not os.path.exists(os.path.join(folder, "race-results.yml")):
+                continue
+            race = load(os.path.join(folder, "race.yml"), {})
+            path = os.path.join(out, f"{race['round']:02d}.json")
+            if os.path.exists(path):
+                continue
+            laps = race_laps(season, folder, race, data, budget)
+            if laps is None:
+                print(f"  laps: round {race['round']} not on Jolpica yet")
+                continue
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(laps, f, separators=(",", ":"))
+            added.append(race["round"])
+    except Budget:
+        print(f"  laps: request budget used up, the rest will follow next run")
+    except Exception as e:  # never let lap data break the points update
+        print(f"  laps: skipped ({type(e).__name__}: {e})")
+    have = sorted(int(n[:-5]) for n in os.listdir(out) if re.fullmatch(r"\d+\.json", n))
+    with open(os.path.join(out, "index.json"), "w", encoding="utf-8") as f:
+        json.dump(have, f)
+    print(f"{season}: lap data for {len(have)} races{f', added rounds {added}' if added else ''}")
+
+
 def main():
     season = int(sys.argv[1]) if len(sys.argv) > 1 else datetime.date.today().year
     root, commit = sync_source(season)
     data = build(season, root, commit)
+    if os.environ.get("LAPS", "1") != "0":
+        update_laps(season, root, data)
 
     out = os.path.join(HERE, "data", str(season))
     os.makedirs(out, exist_ok=True)

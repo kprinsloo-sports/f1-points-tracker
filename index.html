@@ -61,6 +61,10 @@
   .legend span { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin: 0 4px 0 10px; vertical-align: -1px; }
   .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
   .two .card { margin-bottom: 0; }
+  .cardhead { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .cardhead h2 { margin: 0; }
+  .card h3 { margin: 16px 0 8px; font-size: 14px; font-weight: 600; color: var(--muted); }
+  [hidden] { display: none !important; }
   .two { margin-bottom: 20px; }
 </style>
 </head>
@@ -110,6 +114,19 @@
       &nbsp;· <sup>P</sup> pole &nbsp;· <sup>F</sup> fastest lap &nbsp;· <b style="color:var(--accent)">DNF</b> retired</div>
   </div>
 
+  <div class="card" id="lapCard" hidden>
+    <div class="cardhead">
+      <h2>Lap by lap</h2>
+      <label>Race <select id="lapRace"></select></label>
+    </div>
+    <p class="hint" id="lapHint">Top 10 finishers shown, click the legend to add or remove drivers. Dots mark pit stops.</p>
+    <h3>Position on every lap</h3>
+    <div class="chart"><canvas id="lapPos"></canvas></div>
+    <h3>Lap times</h3>
+    <p class="hint">Safety car, pit and first laps run off the top of the scale; hover for the exact time.</p>
+    <div class="chart short"><canvas id="lapTime"></canvas></div>
+  </div>
+
   <div class="two">
     <div class="card">
       <h2>Retirements by cause</h2>
@@ -152,7 +169,8 @@ async function load(season) {
     $("sub").textContent = `No data for ${season} yet.`;
     $("kpis").innerHTML = ""; $("table").innerHTML = "";
     ["stats", "grid", "laps"].forEach(id => $(id).innerHTML = "");
-    [state.chart, state.split, state.reasons].forEach(c => c && c.destroy());
+    [state.chart, state.split, state.reasons, state.lapPos, state.lapTime].forEach(c => c && c.destroy());
+    $("lapCard").hidden = true;
     return;
   }
   try {
@@ -161,6 +179,88 @@ async function load(season) {
     $("footer").innerHTML = `Data: <a href="https://github.com/f1db/f1db">F1DB</a> · last changed ${new Date(last.at).toLocaleString()}`;
   } catch { $("footer").innerHTML = `Data: <a href="https://github.com/f1db/f1db">F1DB</a>`; }
   render();
+  loadLaps(base);
+}
+
+// ---- Lap by lap (data/<season>/laps/, from Jolpica) ----
+async function loadLaps(base) {
+  [state.lapPos, state.lapTime].forEach(c => c && c.destroy());
+  state.lapPos = state.lapTime = null;
+  let have = [];
+  try { have = await getJSON(base + "laps/index.json"); } catch {}
+  $("lapCard").hidden = !have.length;
+  if (!have.length) return;
+  if (!$("footer").innerHTML.includes("jolpi")) $("footer").innerHTML += ` · lap data: <a href="https://jolpi.ca">Jolpica</a>`;
+  const name = n => state.rounds.find(r => r.round === n)?.gpName ?? `Round ${n}`;
+  $("lapRace").innerHTML = have.slice().reverse().map(n => `<option value="${n}">Round ${n} · ${name(n)}</option>`).join("");
+  $("lapRace").onchange = e => drawLapRace(base, +e.target.value);
+  drawLapRace(base, have[have.length - 1]);
+}
+
+async function drawLapRace(base, round) {
+  let race;
+  try { race = await getJSON(`${base}laps/${String(round).padStart(2, "0")}.json`); } catch { return; }
+  if (!window.Chart) return;
+  const muted = css("--muted"), grid = css("--grid");
+  const labels = ["Grid", ...Array.from({ length: race.laps }, (_, i) => i + 1)];
+  const seen = {};
+  const mk = (d, i, data) => {
+    const second = (seen[d.teamId] = (seen[d.teamId] || 0) + 1) > 1;
+    const pit = new Set(d.pits);
+    return {
+      label: d.abbr, data, borderColor: d.color, backgroundColor: d.color, borderWidth: 1.75,
+      borderDash: second ? [6, 4] : [], tension: 0, spanGaps: false, hidden: i >= 10,
+      pointRadius: ctx => pit.has(labels[ctx.dataIndex]) ? 4 : 0, pointHoverRadius: 5,
+    };
+  };
+  const finish = d => typeof d.finish === "number" ? `P${d.finish}` : d.finish;
+  const legend = { position: "bottom", labels: { color: muted, boxWidth: 14 } };
+  const pitNote = (d, lap) => d.pits.includes(lap) ? " · pit" : "";
+
+  Object.keys(seen).forEach(k => delete seen[k]);
+  const posSets = race.drivers.map((d, i) => mk(d, i, [d.grid ?? null, ...d.pos]));
+  if (state.lapPos) state.lapPos.destroy();
+  state.lapPos = new Chart($("lapPos"), {
+    type: "line", data: { labels, datasets: posSets },
+    options: {
+      responsive: true, maintainAspectRatio: false, interaction: { mode: "nearest", intersect: false },
+      scales: {
+        x: { ticks: { color: muted, autoSkip: true, maxTicksLimit: 20 }, grid: { color: grid }, title: { display: true, text: "Lap", color: muted } },
+        y: { reverse: true, min: 0.5, max: race.drivers.length + 0.5, ticks: { color: muted, autoSkip: false, callback: v => "P" + v }, grid: { color: grid },
+             afterBuildTicks: ax => { const n = race.drivers.length, step = ax.height < 300 ? 5 : 2;
+                                      ax.ticks = [1, ...Array.from({ length: n }, (_, i) => i + 1).filter(v => v % step === 0 && v > 1)].map(value => ({ value })); } },
+      },
+      plugins: { legend, tooltip: {
+        itemSort: (a, b) => a.parsed.y - b.parsed.y,
+        callbacks: { title: it => it[0].dataIndex ? `Lap ${labels[it[0].dataIndex]}` : "Starting grid",
+                     label: it => { const d = race.drivers[it.datasetIndex];
+                                    return ` P${it.parsed.y} ${d.abbr} (finished ${finish(d)})${pitNote(d, labels[it.dataIndex])}`; } } } },
+    },
+  });
+
+  Object.keys(seen).forEach(k => delete seen[k]);
+  const all = race.drivers.flatMap(d => d.time).filter(t => t != null).sort((a, b) => a - b);
+  const best = all[0] ?? 0, median = all[Math.floor(all.length / 2)] ?? 0;
+  const timeSets = race.drivers.map((d, i) => mk(d, i, [null, ...d.time]));
+  const lapFmt = s => s == null ? "–" : `${Math.floor(s / 60)}:${(s % 60).toFixed(3).padStart(6, "0")}`;
+  if (state.lapTime) state.lapTime.destroy();
+  state.lapTime = new Chart($("lapTime"), {
+    type: "line", data: { labels, datasets: timeSets },
+    options: {
+      responsive: true, maintainAspectRatio: false, interaction: { mode: "nearest", intersect: false },
+      scales: {
+        x: { ticks: { color: muted, autoSkip: true, maxTicksLimit: 20 }, grid: { color: grid }, title: { display: true, text: "Lap", color: muted } },
+        y: { min: Math.floor(best - 0.5), max: Math.ceil(median + (median - best) * 1.5 + 1),
+             ticks: { color: muted, callback: v => lapFmt(v).replace(/\.\d+$/, "") }, grid: { color: grid } },
+      },
+      plugins: { legend, tooltip: {
+        itemSort: (a, b) => a.parsed.y - b.parsed.y,
+        callbacks: { title: it => `Lap ${labels[it[0].dataIndex]}`,
+                     label: it => { const d = race.drivers[it.datasetIndex];
+                                    return ` ${d.abbr} ${lapFmt(it.parsed.y)}${pitNote(d, labels[it.dataIndex])}`; } } } },
+    },
+  });
+  $("lapHint").textContent = `${race.gpName}, ${race.laps} laps. Top 10 finishers shown, click the legend to add or remove drivers. Dots mark pit stops.`;
 }
 
 function latest(rows) {
