@@ -33,7 +33,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Rebuild season from F1DB
+      - name: Rebuild season from F1DB (plus lap-by-lap data from Jolpica)
         env:
           F1DB_CACHE: ${{ runner.temp }}/f1db
         run: python update.py ${{ inputs.season }}
@@ -45,11 +45,17 @@ jobs:
           if git diff --cached --quiet; then
             echo "No new results."
           else
+            # Lap-by-lap files alone (data/<season>/laps/) don't send a notification.
+            if git diff --cached --quiet -- data ':(exclude)data/*/laps/*'; then
+              msg="Add lap-by-lap data"
+            else
+              msg="Update F1 points data"
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+            fi
             git config user.name "github-actions[bot]"
             git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-            git commit -m "Update F1 points data"
+            git commit -m "$msg"
             git push
-            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Build site

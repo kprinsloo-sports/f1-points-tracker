@@ -1,7 +1,7 @@
 # F1 Points Tracker
 
 Driver and constructor points after every Grand Prix, rebuilt from [F1DB](https://github.com/f1db/f1db)
-and shown as a public web page.
+and shown as a public web page, plus lap-by-lap positions and lap times from [Jolpica](https://jolpi.ca).
 
 ## How it runs
 

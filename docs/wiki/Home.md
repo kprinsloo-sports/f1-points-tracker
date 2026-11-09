@@ -47,6 +47,24 @@ YAML files on GitHub. The tracker reads, for the chosen season:
 
 It also reads F1DB's driver, constructor and Grand Prix lists for names.
 
+## Lap-by-lap data: Jolpica
+
+F1DB has no lap-level data, so lap positions and lap times come from
+[Jolpica](https://jolpi.ca) (the successor to the Ergast API), via its `results` and `laps` endpoints.
+
+- Each finished race is downloaded once and saved to `data/<season>/laps/<round>.json`. Races already
+  saved are skipped, so most runs make no Jolpica requests at all.
+- A race is only saved once Jolpica has every lap (checked against the winner's lap count in F1DB),
+  usually a day or so after the race. Until then the run prints "not on Jolpica yet" and tries again
+  the next day.
+- Jolpica allows about 500 requests an hour and a race takes roughly 15. A run stops after 300 requests
+  (`LAPS_BUDGET`) and the next run carries on, so filling in a whole past season can take two runs.
+- Jolpica and F1DB name drivers differently; drivers are matched on car number, then on the
+  three-letter code.
+- If Jolpica is down or unreachable, `update.py` prints a warning and the points update carries on as
+  normal. Set `LAPS=0` to skip lap data entirely.
+- Commits that only add lap files are titled "Add lap-by-lap data" and do not send a notification.
+
 **Cross-check against official standings.** After each round, `update.py` compares its own running
 totals with F1DB's official standings. If they disagree it uses the official figure and prints a
 reconciliation warning.
@@ -63,6 +81,9 @@ and a Drivers / Constructors view. It shows:
 - **Grand Prix points vs sprint points**: how much of each total came from sprints.
 - **Finishing position in every Grand Prix**: a grid of results race by race.
 - **Retirements by cause**.
+- **Lap by lap**: pick a race to see every driver's position on every lap (starting from the grid)
+  and their lap times. Pit stops are marked with dots. Top 10 finishers are shown; click the legend
+  to add others. Lap times are clipped so safety car and pit laps don't squash the chart.
 - **Fastest laps and fastest pit stops, race by race**.
 
 Pit stop times are F1DB's pit-lane times (entry to exit), not stationary time.
@@ -81,6 +102,8 @@ Everything lives under `data/`, one folder per season:
 | `data/<season>/season.json` | Full rebuilt season, including a content hash and generation time |
 | `data/<season>/changelog.json` | One entry per run that changed something: new rounds and any corrections to earlier rounds |
 | `data/<season>/dash_drivers.json`, `dash_constructors.json`, `dash_rounds.json` | Ready-made tables the dashboard reads |
+| `data/<season>/laps/<round>.json` | One race lap by lap: per driver, position and lap time on every lap, grid, finish and pit laps (from Jolpica) |
+| `data/<season>/laps/index.json` | Rounds that have lap data (feeds the race picker) |
 
 The CSV files open directly in Excel if you want to do your own analysis.
 
